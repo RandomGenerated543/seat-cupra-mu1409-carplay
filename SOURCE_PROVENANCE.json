@@ -23,13 +23,17 @@
     "origin": "Harman public project licensing/attribution; retained",
     "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
   },
+  "LICENSES/LGPL-2.1-or-later.txt": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "5749785c8bdefafcb5d798270ed0a967036fe2ca63dcedade1627565dfef81d2"
+  },
   "LICENSES/MIT.txt": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
     "sha256": "63388ecdd8b3f6790b0be5543309d0d4b9769b516481d55b9115787b8915dc49"
   },
   "README.md": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
-    "sha256": "0ba7797be333bb3e9c3b29558f43a44816425cda356c2a77b480dc4371932e72"
+    "sha256": "53ac0fa4543e6a909f5e9953519903cd255ea213c6ec4cc0c13bc6063426f770"
   },
   "THIRD_PARTY_NOTICES.md": {
     "origin": "Harman public project licensing/attribution; retained",
@@ -59,6 +63,18 @@
     "origin": "Project-owned MU1409 automatic runtime insertion only; OEM startup excluded",
     "sha256": "3f198c9e23d075648a57f1993ac3b169550a0d3ec9851d56cf9766380d0eae0f"
   },
+  "deployment/full-install/consolidated.ksh": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "030d4f6c2beea47433913b39644b6469fd6f21015f6327f6427957effe753f05"
+  },
+  "deployment/full-install/inputs.json": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "813018b7ccb7d65d480aa7fa574170738f3ea75db63e8f4f1f5bcdeeeb1d1765"
+  },
+  "deployment/full-install/reference-baseline.json": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "42f6f648843a1a8c2729ebd1900e4aa80f6dc43123a692b12446567a50f7432c"
+  },
   "deployment/receiver-upgrade/README.md": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
     "sha256": "4ac31499d867e18fa6e88008c368c7880d019208796c7d6270802d47eb52b5d4"
@@ -77,11 +93,19 @@
   },
   "docs/BUILD.md": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
-    "sha256": "03a3235cf9c7742fa8bcb1efb883bd9b67102fc6720856d30d25016286e1fc84"
+    "sha256": "5b3d99987fad28a1a97dfcfe502265c9ded4e50e0470a2b4c8d1f4fd84bef94d"
+  },
+  "docs/CONSOLIDATED_INSTALL.md": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "d6a69c0847e06ff7c33ed37821dd583da476eef19423ed32d647a0a06674248c"
+  },
+  "docs/INSTALL_VALIDATION.md": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "3dbdf1d19449c941386ecc16eed9e407a8d4f0b9ec23dccb2f72800749b00b66"
   },
   "docs/PREREQUISITES.md": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
-    "sha256": "b67c3fe2c549b226e4a2373e8edb86f7ad506ad4cd644268479407f6b2e05c6c"
+    "sha256": "f848446f37eb65232ddf9d5bd6234d74cef14db306b20ba07a3689e251d45f2f"
   },
   "docs/RECOVERY.md": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
@@ -109,7 +133,7 @@
   },
   "docs/STATUS.md": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
-    "sha256": "dc3b1656dc895b038d45b178cbd5043156885750e915a2cdf0a3c3e54145f25e"
+    "sha256": "8e0aec1d5eab1da36105211ceaedb0e4e1760b9a440f847f50b960ba8cf9acc2"
   },
   "docs/TESTING.md": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
@@ -271,9 +295,13 @@
     "origin": "Working R13 SEAT control/startup integration",
     "sha256": "f8f0c255ba46c2abec45b2a38283141728bb4b7c21e3b5e3068c0d51dbf4bb30"
   },
+  "scripts/assemble_consolidated_install.py": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "6425d44ad4413c662d7696e2cf2292a07ee890323a632d471eec39d6f3513423"
+  },
   "scripts/audit_publication.py": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
-    "sha256": "b30f8e5c3bb003378e9838c34d2966dfd20d3cc4d965f233a10d560cc1f6cca6"
+    "sha256": "b30bf6890e543515fd7dd0b954d939bc239d3604f45e7ebd3ff5c0fd45bfb6e8"
   },
   "scripts/build_menu.py": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
@@ -291,9 +319,21 @@
     "origin": "Project-authored public handoff integration, documentation or build recipe",
     "sha256": "8b079f9d788582273211351141cf69c9d25526b423c08179104084dd815ef244"
   },
+  "scripts/collect_install_baseline.py": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "746761ba1e8e34cf13ed48fe7b4fe96287d8dd59066fe69e6639947d0163b67d"
+  },
+  "scripts/compare_install_baseline.py": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "943b2f3480993ea34557a191d9a6b68f2bb2264c27fb27643a4e9154b3f90ff5"
+  },
+  "scripts/package_install_sources.py": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "7ad39d94d2ae0d7a1b984a5e7e678e54b73a1535789911a5feb2b55b577182a9"
+  },
   "scripts/test_host.py": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
-    "sha256": "fbe5fd7565736885060d05aa8f572c0b4f9f408447916681d276f6c4d75f5a3a"
+    "sha256": "86b5ecb96c6cd3e8c312ba972c1971c1cc715afd76550beadf7d3b3f66659b63"
   },
   "scripts/verify_receiver.py": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
@@ -530,6 +570,10 @@
   "src/menu/java/mib/mu1440/vehiclespeed/Mvs1Codec.java": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",
     "sha256": "5801be2e20a767309471b628bff30a87923c2b04c45ce97dd35c4aa7e4540ee5"
+  },
+  "src/menu/probes/MibrR13MigrationProbe.java": {
+    "origin": "Project-owned R13 target Java link probe from the retained migration candidate",
+    "sha256": "50319ffd7ea29f9c92bd972949da72de76b9ca07959669cc76788e70774283f8"
   },
   "src/native/alt111-settings/include/alt111_settings.h": {
     "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
@@ -842,6 +886,10 @@
   "src/native/tee-compat/tee_compat.c": {
     "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
     "sha256": "23cdeba922aa719ac890117b56c45cfd2f4510e23d337d3b6aa2ddc4c08f29fa"
+  },
+  "tests/consolidated_install_test.py": {
+    "origin": "Project-authored final-stack installation/qualification tooling and documentation",
+    "sha256": "e9967e3446891951db15ac0141ad8942ba570f288f124825bfd378a5db7ff0a9"
   },
   "tests/menu/MibrCanonicalElementMenuTest.java": {
     "origin": "Authorized Harman project-owned host tests",

@@ -17,14 +17,19 @@ It is an unofficial contribution, not a Harman/Apple/SEAT/CUPRA-supported produc
 1. [Status and known limitations](docs/STATUS.md).
 2. [Exact-target prerequisites](docs/PREREQUISITES.md).
 3. [Build from source](docs/BUILD.md).
-4. [Tester runbook and acceptance checklist](docs/TESTING.md).
-5. [Recovery](docs/RECOVERY.md).
+4. [Consolidated final-stack installation candidate](docs/CONSOLIDATED_INSTALL.md) for a matching post-omonob baseline.
+5. [Existing-stack receiver update](docs/TESTING.md).
+6. [Full-stack recovery](docs/CONSOLIDATED_INSTALL.md#restore-this-fresh-installation) or [receiver-only recovery](docs/RECOVERY.md).
 
-**This is a developer handoff, not a universal SD-card installer.** A guarded
-receiver update is supplied only for the already-installed exact compatible
-project stack. Do not copy it over omonob, stock firmware or an unknown profile.
-Fresh installation/control-menu binding needs per-unit integration and locally
-supplied OEM inputs. Do not bypass a rejected hash or compatibility check.
+**This is not a universal SD-card installer.** The consolidated candidate
+installs the final WP1 foundations and WP2/menu/fixes together after matching
+omonob removal. It uses locally supplied exact inputs pinned in
+deployment/full-install/inputs.json, not intermediate receiver upgrades.
+The generated full bundle contains firmware-derived inputs and stays local.
+GitHub's Download ZIP is source, not that assembled SD bundle. The combined
+installer still requires vehicle acceptance. The separate receiver-upgrade folder
+only updates an already-matching project stack. Do not overlay either onto a
+running omonob installation or bypass a rejected compatibility/hash check.
 
 ## Preserved tested configuration
 

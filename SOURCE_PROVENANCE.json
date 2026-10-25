@@ -1,0 +1,958 @@
+{
+  ".github/workflows/host-checks.yml": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "90b97ab4c1fdf7661f210d99c17f3329900a77a33c7c6c66b6ad3d950137fde2"
+  },
+  ".gitignore": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "7921a7edf05ed499fe6b3ed1dcf5b18d0ba7ae5c81d1edc12ca075cbbfc847c2"
+  },
+  "ACKNOWLEDGEMENTS.md": {
+    "origin": "Harman public project licensing/attribution; retained",
+    "sha256": "b6648a651a36e26bbd4b7f776e62259e10591e43d2f3bfa8a27aa223f47fb46d"
+  },
+  "CONTRIBUTING.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "4d5ee5d6c895a7f0d20a7de62b024eadba8ead14c0ef2c1d700754ef74729060"
+  },
+  "DISCLAIMER.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "4f69cd7361f3830f48d365b08d4029bcddf5ae00d0a7126704eb4b35a0833aa4"
+  },
+  "LICENSE": {
+    "origin": "Harman public project licensing/attribution; retained",
+    "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+  },
+  "LICENSES/MIT.txt": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "63388ecdd8b3f6790b0be5543309d0d4b9769b516481d55b9115787b8915dc49"
+  },
+  "README.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "0ba7797be333bb3e9c3b29558f43a44816425cda356c2a77b480dc4371932e72"
+  },
+  "THIRD_PARTY_NOTICES.md": {
+    "origin": "Harman public project licensing/attribution; retained",
+    "sha256": "2c10b343d0101224d0e2c4307f14e2755cbcece89bbdede2febc42a50c5b2211"
+  },
+  "config/cpvc-r5.profile": {
+    "origin": "SEAT canonical settings profile",
+    "sha256": "0fb1699d3fa41f47a40e47b7c3ae51d221043022af66d92aebc334c9eb121d3d"
+  },
+  "config/mibr-carplay111-safearea.conf": {
+    "origin": "Last working SafeArea metadata",
+    "sha256": "90eac4dc16dc5d076737a852d22172f1f93ca288af200ba8e8a17c0db64a7b7b"
+  },
+  "config/mibr-seat-zoom-auto.conf": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "16f4affa3003cb1ae3f22d5e0be86a5b6fc16bbf40662629df0aa5ad0ff52e15"
+  },
+  "config/mu1409-reference-hashes.sh": {
+    "origin": "Target compatibility hashes; not firmware payload",
+    "sha256": "50217864569a35099c85b60af84f637c4d8dca09376ca1959eee020b15595072"
+  },
+  "config/owned-hmi-startup-block.txt": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "a1a826ae86ca59869a7472540214ef1e82e7670f214571bc61ac04ca615bb938"
+  },
+  "config/owned-runtime-startup-block.txt": {
+    "origin": "Project-owned MU1409 automatic runtime insertion only; OEM startup excluded",
+    "sha256": "3f198c9e23d075648a57f1993ac3b169550a0d3ec9851d56cf9766380d0eae0f"
+  },
+  "deployment/receiver-upgrade/README.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "4ac31499d867e18fa6e88008c368c7880d019208796c7d6270802d47eb52b5d4"
+  },
+  "deployment/receiver-upgrade/hashes.sh": {
+    "origin": "Guarded tested queue-recovery update; exact baseline required",
+    "sha256": "ede6e55665120d429d13ccaf8240b3bf8aa68f84eae0c2408a8b21f1b631c425"
+  },
+  "deployment/receiver-upgrade/install.sh": {
+    "origin": "Guarded tested queue-recovery update; exact baseline required",
+    "sha256": "a960e3ab4b6f1b2448eba47b4c7d8ecd654b0c4ef7111e049633a7515426deb3"
+  },
+  "deployment/receiver-upgrade/payload/libmibr_carplay111.so": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "6165f72974b4ebea8f4a3e27a0354f20df98e29350b810b4e0ac4d5efcf7fce5"
+  },
+  "docs/BUILD.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "03a3235cf9c7742fa8bcb1efb883bd9b67102fc6720856d30d25016286e1fc84"
+  },
+  "docs/PREREQUISITES.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "b67c3fe2c549b226e4a2373e8edb86f7ad506ad4cd644268479407f6b2e05c6c"
+  },
+  "docs/RECOVERY.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "dd9a73a1a6e481ffcebcf9b17d918f68ddf081ba213dd994d54c8537ee93d58e"
+  },
+  "docs/RESULT_TEMPLATE.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "85743509358583f8f8ec19a4233a320bb4db4dc49ab9fddc0e43a6b19d0c0bd7"
+  },
+  "docs/SEAT_CUPRA_MU1409_SCALING_AND_RECOVERY.md": {
+    "origin": "Public PR69 observation and limitations",
+    "sha256": "c9e76f5b19d436231f9d1893d3a5f6a2e20419d0e00967b9825d91d3cdf5162d"
+  },
+  "docs/SEAT_CUPRA_MU1409_SCROLL_INDICATOR.md": {
+    "origin": "Focused public contribution documentation; newer integration status differs from tested snapshot",
+    "sha256": "234ed8845e1d45a2b1a2d9130b68d641013798684b4cade6f82c67801eab9c3f"
+  },
+  "docs/SEAT_CUPRA_MU1409_VIEW_CALIBRATION.md": {
+    "origin": "Focused public contribution documentation; newer integration status differs from tested snapshot",
+    "sha256": "005e4e1f337de3631c107fcde2e6bb39d854f0344b6b4fa332cf60717841d252"
+  },
+  "docs/SEAT_CUPRA_MU1409_WHEEL_ZOOM.md": {
+    "origin": "Focused public contribution documentation; newer integration status differs from tested snapshot",
+    "sha256": "422db9e260a83ddad232213816640f4dbff7b85a1ede58bc9e957e85b82c4738"
+  },
+  "docs/STATUS.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "dc3b1656dc895b038d45b178cbd5043156885750e915a2cdf0a3c3e54145f25e"
+  },
+  "docs/TESTING.md": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "08c99693a189eaef56d5892b8414fafcef83d08ebe212dc791ce82fba71b8af3"
+  },
+  "runtime/README.md": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "c552f4b55f8e5a190e247505f38be5525804bbfd9b4753004727a95e8baf4fd5"
+  },
+  "runtime/auto-direct/altscreen111.conf": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "208ae05611aaa1423ab477210f1da3b87539dcfeb042fcf05fee5cb52aeac98b"
+  },
+  "runtime/auto-direct/boot_autostart.sh": {
+    "origin": "Observed working MU1409 autostart integration",
+    "sha256": "09d6ad98578a01da6943b939c817cd661f23d1da121c97f61bfd1b96ca2277b5"
+  },
+  "runtime/auto-direct/common.sh": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "e4118f3afc9aaf2be8dbf53a7aef2990423c03d117466e02c337e3ed67cec636"
+  },
+  "runtime/auto-direct/direct_fps.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "ea60e7753b29c06f2ec240d41863dc40160f964c0d22f9d3e00c4a8981763b67"
+  },
+  "runtime/auto-direct/direct_ts_auto_disable.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "509f3a8c76aad301aa07e82259eb058622a6ed25fc4885088005ae62a3312633"
+  },
+  "runtime/auto-direct/direct_ts_auto_enable.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "9f2c7897117097f69e68dfaf889c42eacf3b616e2151e5d6330252331cec1e85"
+  },
+  "runtime/auto-direct/direct_ts_auto_start.sh": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "f3079522a9b9fe5461500ac91de143305592294c93160de3caad7b48f85922dc"
+  },
+  "runtime/auto-direct/direct_ts_auto_status.sh": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "4abf6f5a2b9e6b7aa1fc24f0d316128f9ee15381559cc3e751db5a1fbb305f13"
+  },
+  "runtime/auto-direct/direct_ts_auto_stop.sh": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "c1a3e3dd68eb1e0deecea6bb41426732121fbe72ed2a01d00ab874812b7958c9"
+  },
+  "runtime/auto-direct/direct_ts_auto_supervisor.sh": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "4c59510e9a014279cbe14f2a2fa70a9fea032488f4aaaa5bb0f6a27929907a77"
+  },
+  "runtime/auto-direct/direct_ts_auto_watchdog.sh": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "a4a6116774b1c9621008c7c78ce75f83ccfb59affaa36bb5856a145d97262a4c"
+  },
+  "runtime/auto-direct/patch_carplay.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "003ebfd9e5cb7831529c56e5874776fb6a9f548a2079e7ae35b37478ce920126"
+  },
+  "runtime/auto-direct/restore_stock.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "412d919f44b7650ef4812c2fde142f20a7fb35a3b5c2b134ccb9bb2a72704116"
+  },
+  "runtime/auto-direct/verify_carplay111_boot.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "da674725a634ec98adc188fcbbc7fcc84a85b12d188c9218553def50d98c0e24"
+  },
+  "runtime/auto-direct/writev_gate.sh": {
+    "origin": "Exact MU1409 v0.1.4 deployed media-owner runtime",
+    "sha256": "e7336f4f705798815501d042326ba9b351fc1a75d3ca291c8cf9cedb71e5403c"
+  },
+  "runtime/deployment/session.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "6112ef662a45f139b370e9a8d68a4101a0d91c5d58d9b8fc7c5225de5f765124"
+  },
+  "runtime/diagnostics/gen2_collect_logs.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "e73f0956c55f8cbf6588903352f3bd085ffd295e97b2053eea4e3186c557ad92"
+  },
+  "runtime/diagnostics/gen2_keyframes.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "ce65da87b11eb03d5056483caa29364c8c71fd04b330c6346dbc39ccee2613d5"
+  },
+  "runtime/diagnostics/gen2_prereq.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "729eebdf85f5c27422033035108b892e034eead33ef0ffb4617d1f336568f481"
+  },
+  "runtime/diagnostics/gen2_reacquire.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "01e5f9d06e0697476cda3843d7d24d5b7fc89968ee62e9a4b19701cf0ce59c06"
+  },
+  "runtime/diagnostics/gen2_resync.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "97c9ab9e74b2d699080c5bd0903c712acb8cdc5412555299f26a7fae0214279a"
+  },
+  "runtime/diagnostics/gen2_status.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "bddac87df6641e82b544631431510bb2a8111e94323ebf06dc4ac56c3f2d101a"
+  },
+  "runtime/diagnostics/keypanel_capture.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "540e382da44efc0d453e288ccb86e1088a13c83ceb401573349bbb3a4de05840"
+  },
+  "runtime/diagnostics/keypanel_note.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "d58ebc4f159a32aa3e421970eedc683bcb30981fdadd9b89a96fec865460ba60"
+  },
+  "runtime/diagnostics/keypanel_note_native.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "e33f73354d3bdc16c96a3715a11cb500f8b8c3586ea71ee814a5771e28d264ec"
+  },
+  "runtime/diagnostics/keypanel_start_native.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "ef8a7bd0133544b7856287a87501acca6260d56cc5544334ea3762031bef4b60"
+  },
+  "runtime/diagnostics/keypanel_trace_discovery.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "ce9aade10233c54e08d7906aabd0d1594ad06f52f9c83636b49aea0975a7580a"
+  },
+  "runtime/isotx2-gate/gate.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "7a7ffdaf00550e63fbfe404a3197168e23dc120467f84024064055fe55810f5d"
+  },
+  "runtime/isotx2-gate/install_preload.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "f46199185ca940944205cc5633bde9ff82021d6431fddf2dfc5b63da33c2610e"
+  },
+  "runtime/isotx2-gate/preload_control.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "cc9823cfed6b78a23f29dccbe70715a9c51a2e2827952bc279ba65d374f89a2b"
+  },
+  "runtime/isotx2-gate/restore_preload.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "7dc571e9cfc384f8c37fe2b62aeb161fd9855b8b57647271df49b13d13c4fa84"
+  },
+  "runtime/isotx2-gate/verify_preload_boot.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "0e986db3bbcb98633c83e3816399e473d2b65a935afd719541f13821731fc473"
+  },
+  "runtime/navigation/README.md": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "6426cd9231f50726e8242451bc066f101daaa6a270f0d2ec007e558c84bd2bec"
+  },
+  "runtime/navigation/gen2_nav_config.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "aff8ae19e86cf6adb67bc39a62fc911cef121d28a2f7d5b13b6cfaa3369fb9e4"
+  },
+  "runtime/navigation/gen2_safearea.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "31bc570ecc11fd2de7cb341db4b9c919a1ac94f3e6821f56d2adaa7011a8716b"
+  },
+  "runtime/settings-r13/boot.sh": {
+    "origin": "Working R13 SEAT control/startup integration",
+    "sha256": "597417ebd67174d65c8bf3055ff0bf3388db6108a2cb12b58afca39d9acdec27"
+  },
+  "runtime/settings-r13/center.conf": {
+    "origin": "Working R13 SEAT control/startup integration",
+    "sha256": "5d7d795eaa54aed472a2c1e145b3a8039dde4fe39d0c48b9e1c596b723fd4c5c"
+  },
+  "runtime/settings-r13/control.sh": {
+    "origin": "Working R13 SEAT control/startup integration",
+    "sha256": "f8f0c255ba46c2abec45b2a38283141728bb4b7c21e3b5e3068c0d51dbf4bb30"
+  },
+  "scripts/audit_publication.py": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "b30f8e5c3bb003378e9838c34d2966dfd20d3cc4d965f233a10d560cc1f6cca6"
+  },
+  "scripts/build_menu.py": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "5907707a63eb869443d11445c6d851178cec8d4381a9968dc639a4aab518041e"
+  },
+  "scripts/build_native_tools.sh": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "eb683f7c7a1ce6f8d6210577ef48ec3655ec47f9a0e37f6ed3fb0e0e9f3c102d"
+  },
+  "scripts/build_receiver_docker.sh": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "b9fa382517221e0fad78d12c54e4cb753d884cc8e952a39d3c0f7af4d876f105"
+  },
+  "scripts/build_receiver_inside.sh": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "8b079f9d788582273211351141cf69c9d25526b423c08179104084dd815ef244"
+  },
+  "scripts/test_host.py": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "fbe5fd7565736885060d05aa8f572c0b4f9f408447916681d276f6c4d75f5a3a"
+  },
+  "scripts/verify_receiver.py": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "3be4ab7df24101f7ad13fdd6fad4907d90cfbf56ef9f1d497207e69b6cfbe97b"
+  },
+  "settings/registry.json": {
+    "origin": "Canonical public 48-key settings registry",
+    "sha256": "818cfd7b635742c98e291c3a6eb4a4350bec873715245d2d888fcac360ccd098"
+  },
+  "src/menu/assets/gears.png": {
+    "origin": "Harman R13 runtime overlay; package publication permission confirmed",
+    "sha256": "db25dd8cc049e27de59f40d018b8d74d3f4e3b0688b35bb6cd1f95c6e8604d0d"
+  },
+  "src/menu/assets/thumb-red.png": {
+    "origin": "Project-authored uniform RGBA",
+    "sha256": "2d48cfeea6f3b232906f50e6173c95fba3071903498cc2dcd3dea9f073720b8c"
+  },
+  "src/menu/assets/track.png": {
+    "origin": "Project-authored uniform RGBA",
+    "sha256": "c08cbe30443acfba00e0537c648d335eb13a7bd126bdd4bf8e8bebcb5486b2a3"
+  },
+  "src/menu/java/de/mibr/hmi/MibrCanonicalElementMenu.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "3795ab1b33beb634c0776fa6c2ee3da81dcc2bdb7f9def5aeaf9c079443fb48c"
+  },
+  "src/menu/java/de/mibr/hmi/MibrCarPlayMenuModel.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "aa5684629c97998499e7f69b70b43d042e34d4988ad11671a40a082468febc70"
+  },
+  "src/menu/java/de/mibr/hmi/MibrControlBootstrap.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "14db567c0c949acb7772adef2cb5d75c83df3f7dd1f94ff8e5863415fde06305"
+  },
+  "src/menu/java/de/mibr/hmi/MibrControlClient.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "ae4040d74147e9485c989c78c53e744f03217704fced3c6b3256a4e8199765ba"
+  },
+  "src/menu/java/de/mibr/hmi/MibrControlProtocol.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "9e088a52eb6c2eb10b600ab1d7566320586c9c399bf904e3a71c135dd39caecb"
+  },
+  "src/menu/java/de/mibr/hmi/MibrControlSession.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "9f27526cedc9f85bcd6714115d7a5eb5e2459b66dce1ee0b335702d936b9468f"
+  },
+  "src/menu/java/de/mibr/hmi/MibrDraftChoiceModel.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "8a53bdc63b90ea4b11294d6cdbb1f160679cec679df330aeac28f34e11ece6a5"
+  },
+  "src/menu/java/de/mibr/hmi/MibrDropdownFrame.java": {
+    "origin": "Latest target menu adaptation: MU1409-R13-dropdown-fix-v0.2",
+    "sha256": "3ca68848b6f7c57397f269b9e6a868531b337d02983bab52e07d56a9adacc743"
+  },
+  "src/menu/java/de/mibr/hmi/MibrDropdownTrace.java": {
+    "origin": "Latest target menu adaptation: MU1409-R13-dropdown-fix-v0.2",
+    "sha256": "36d5eacebfbee7f3641363e3b8f688b46f3c2066307cc6648697a79629f933c9"
+  },
+  "src/menu/java/de/mibr/hmi/MibrElementDetailRows.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "a28862e99ef252e5385112a607bc2e1c0cf3befc6c4eac853c085d4f50e358ee"
+  },
+  "src/menu/java/de/mibr/hmi/MibrElementEngine.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "4dcaeb2015d35df8ad1521651c7ea6d3aeabe6e7e13e7727d715f9b81b0bb49e"
+  },
+  "src/menu/java/de/mibr/hmi/MibrElementSpec.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "6722c4c02b249685e059cff9ddd67279104a8cc5ab6e04bb6095abdc24cdd0aa"
+  },
+  "src/menu/java/de/mibr/hmi/MibrElementTree.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "231e98b521e1b5d27b5b79e297a38b190b7d7fea91e277136bd7aea8e7d15875"
+  },
+  "src/menu/java/de/mibr/hmi/MibrEngineState.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "f5af19ebdf85b01e1538e51a54002afed1906bd5f479c8874eb686dcf3ae16aa"
+  },
+  "src/menu/java/de/mibr/hmi/MibrHomeAnimationMirror.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "6d8a394898910d929ceba0807a270cfb4135ad13b94f984716309ec3e59f9600"
+  },
+  "src/menu/java/de/mibr/hmi/MibrHomeCio.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "104fefa148d4987a3fedee487afa8702c0134d68503834ee7501f1b0435a9ea5"
+  },
+  "src/menu/java/de/mibr/hmi/MibrHomeList.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "5124ca6b508b5b44e43708ff6df038a32be59aa1fcfc1f675f4d74e080bb6501"
+  },
+  "src/menu/java/de/mibr/hmi/MibrI18n.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "dc6ff1ec8d6325252c4c5547bba7662befc6ecd45df25a03364be9dfd9e974a4"
+  },
+  "src/menu/java/de/mibr/hmi/MibrIsolatedSsmServices.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "49c83464f4b1849de5407f4d72aa7ebf1fe2293c552e12e78fc45d2bb0d11356"
+  },
+  "src/menu/java/de/mibr/hmi/MibrMenuDefinition.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "89eb0bb7afee8d7d59a4f795b50ab985d14bec28edb5fe4a0b050639b24f60ec"
+  },
+  "src/menu/java/de/mibr/hmi/MibrMenuKeyBack.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "674eaba4285f954c6b3da6d14fb22573cadb28b189c54adc8dd81261f47e93c8"
+  },
+  "src/menu/java/de/mibr/hmi/MibrNativeDropdownEditor.java": {
+    "origin": "Latest target menu adaptation: MU1409-R13-dropdown-fix-v0.2",
+    "sha256": "ec1aa66d15ce4c5bfc446c9e8c2ef7dcc87e10aa3e176575e422ffe36b4972ef"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOemDropdownStyle.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "b1ec0287e1e35a481370efc9354e4dab853a904a83e1333465b9bcedf2af86bd"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOemPageEntry.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "4993d5680208bb2b1f9e2022fb06cba4100977c42ffb783f12b511ae8e25560c"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOemSsmTemplate.java": {
+    "origin": "Latest target menu adaptation: MU1409-menu-scrollbar-v0.3",
+    "sha256": "919e087a419ac2ab6fc83820ba8cd29dcc9fcfdcfb48d64a0ef5bfdf69c6f0ca"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOemTileLongPress.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "62bb91248827d626dd16f760e69dc0e3fb9e0b4b35d621bef35e501a88aab2c9"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOwnedSsmPageHost.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "c8b6eec6bee32cdf73cdada363741c87dc08f5c84bbdf10c42759d6ec08f3e86"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOwnedSsmRows.java": {
+    "origin": "Latest target menu adaptation: MU1409-menu-scrollbar-v0.3",
+    "sha256": "7a806aac252da453bec56722de1049f9d29f03d88df4fd36d6942e6a938bb395"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOwnedStaticImage.java": {
+    "origin": "Latest target menu adaptation: MU1409-menu-scrollbar-v0.3",
+    "sha256": "4d4db86227b03aef77aae4d380f637eab3c1e98a902160c88d3e97757abcf247"
+  },
+  "src/menu/java/de/mibr/hmi/MibrOwnedWidgets.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "c7cb37be57122431e5e3732672d338eaa354bd879a8c0dab41df6a88b0bc7ed0"
+  },
+  "src/menu/java/de/mibr/hmi/MibrPopupEditorModel.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "f8c30e0febc7ae51b8d40ab5cd4c8fa9e36769bdbcd03db76774fe88a18cb62f"
+  },
+  "src/menu/java/de/mibr/hmi/MibrScrollBarUI.java": {
+    "origin": "Latest target menu adaptation: MU1409-menu-scrollbar-v0.3",
+    "sha256": "a21154e0c353305eb343cce4993de132583cde794691dd218a6912e52804bc22"
+  },
+  "src/menu/java/de/mibr/hmi/MibrScrollIndicator.java": {
+    "origin": "Latest target menu adaptation: MU1409-menu-scrollbar-v0.3",
+    "sha256": "9d3667ffac6ca4c483aeb2d37d3109f0a2df772913aa742d19390e2be44f6821"
+  },
+  "src/menu/java/de/mibr/hmi/MibrSeatGearOverlayImage.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "b7f0ee4d39d152202d63e9d89372e6984c679cced7680510dce0bc2ad9bcb7c0"
+  },
+  "src/menu/java/de/mibr/hmi/MibrSeatGearOverlayUI.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "0fec62b3eef31d945ec8004dd919ba19216ae41ca7a148f6d0d9fc6cd4f746b0"
+  },
+  "src/menu/java/de/mibr/hmi/MibrSettingsCatalog.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "a23ca1c19e7b8608bb454eb5621a79c5037fe6b03d99eddca5b32d2c9ba22ffe"
+  },
+  "src/menu/java/de/mibr/hmi/MibrSsmNativePage.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "eb49557d6cf58203fd841323516e7145bd0862a77b5998773a3b7c38571ca6ac"
+  },
+  "src/menu/java/de/mibr/hmi/MibrSsmScrollbar.java": {
+    "origin": "Latest target menu adaptation: MU1409-menu-scrollbar-v0.3",
+    "sha256": "b27aa8f80794b9a972b9c3b44463047479dcccee954f879a299a463fa83c5b54"
+  },
+  "src/menu/java/de/mibr/hmi/MibrSsmSourceBinding.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "6cd180674e2cccfc774ee350cd202022ff0063218022a19e39c6faefe5104f60"
+  },
+  "src/menu/java/de/mibr/hmi/MibrThreeViewAreas.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "109b1908a5640a28922bdefe7e59e95a3b4db978d4c8d15cbb654ca02953ca90"
+  },
+  "src/menu/java/de/mibr/hmi/MibrV3Bootstrap.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "41d9a8d8e0524c4fcbddba5389caf7cdf3d7da42807c96009632da35b52d4fe5"
+  },
+  "src/menu/java/de/mibr/hmi/MibrV3Client.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "e7b5248f2eba3eced5b360ad6e4af6b09f3361c06e5c6b5ad1d0b94aec22b255"
+  },
+  "src/menu/java/de/mibr/hmi/MibrV3Protocol.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "29cbcd284a8e782cbeddf7eabda706286acd5d727efb103dec7927e644d72789"
+  },
+  "src/menu/java/de/mibr/hmi/MibrV3Route.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "68b4c5debc73de6d5861107c9c57c14a8537a40f98bdbe5f19f0fad3b414b106"
+  },
+  "src/menu/java/de/mibr/hmi/MibrV3Session.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "37137cb16eca478e7a6e9bf334838688c29e003f5fc2bb7e69cca2b468430770"
+  },
+  "src/menu/java/de/mibr/hmi/MibrVdataBridge.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "dc7d375349045ead63ad2b9d307b7112b132acaaad845c93a48af2d5ae0b4673"
+  },
+  "src/menu/java/de/mibr/hmi/MibrVdataDiag.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "d5cce4c4ea86a68e89ddcc961df3c4cc9dcee96e36b98e0b08973448500c2147"
+  },
+  "src/menu/java/de/mibr/hmi/MibrViewState.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "de5cb6e304a9bf4eb00e326d9a31375270b24e53ad1dc8ec0bc2832ea6ed1f0e"
+  },
+  "src/menu/java/de/mibr/hmi/MibrVisualizationService.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "d887ba3547d30281b3164ad292e897c9e4e67889d07fd3a17a8d65627ac48d18"
+  },
+  "src/menu/java/de/mibr/hmi/MibrVstatusAdapter.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "2153e7a5f6a5d3193de44bd808205c25e0e020f6af292f8c2cedf052b816bd7f"
+  },
+  "src/menu/java/de/mibr/hmi/MibrVstatusSource.java": {
+    "origin": "Harman R13 project-owned Java, publication permission confirmed by owner",
+    "sha256": "ca6acb4796e31a7dd5a18882a024ccd1f0778429aba81d63fca7f1145321dab5"
+  },
+  "src/menu/java/mib/mu1440/vehiclespeed/DsiVehicleSpeedAdapter.java": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "f0b623129a8b3a682c27752a1f6efaf80bfc2440cc16d23c6d248614da3dc076"
+  },
+  "src/menu/java/mib/mu1440/vehiclespeed/Mu1440CarBCSpeedDecoder.java": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "9a5a7230d956a665417e59a577017ce6ef40d0bcdda7c738029988075dccd6ff"
+  },
+  "src/menu/java/mib/mu1440/vehiclespeed/Mvs1Codec.java": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "5801be2e20a767309471b628bff30a87923c2b04c45ce97dd35c4aa7e4540ee5"
+  },
+  "src/native/alt111-settings/include/alt111_settings.h": {
+    "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
+    "sha256": "5ebae879ea8966142c5d39211527283d65912cf5ac6d4afdcd84221e2952b3f6"
+  },
+  "src/native/alt111-settings/include/registry_generated.h": {
+    "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
+    "sha256": "08a85509aa8facf6ae414e037307e3bd8ca17d353d11e6caa82d03b08a1c2de6"
+  },
+  "src/native/alt111-settings/include/registry_table_generated.h": {
+    "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
+    "sha256": "dd771002778cb540a3419149665ad33ec9bc921ebffd55165b23df4247c87d1d"
+  },
+  "src/native/alt111-settings/settings_cli.c": {
+    "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
+    "sha256": "c5de712613069900a17fd0d4c1e0f5d20a37bee8fb8ce416c340bcdea9b06125"
+  },
+  "src/native/alt111-settings/settings_core.c": {
+    "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
+    "sha256": "68673352342055ac751460f227c51ccfab4ad9b0c3ef0fbe6b24a6a1fd99fdce"
+  },
+  "src/native/alt111-settings/settings_posix.c": {
+    "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
+    "sha256": "8850dee7369b3806c26b241e5db8eb615cfe9d5853f374639f9424917bf3fa35"
+  },
+  "src/native/altscreen111-gen2/include/alt111.h": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "d5d1ca79521ee09192aaa485219da4e40f98c5049744923eb6787793252edde3"
+  },
+  "src/native/altscreen111-gen2/include/alt111_bridge_status.h": {
+    "origin": "Public protocol header",
+    "sha256": "b0497fcb0cdc8e0c17445316cf941cbb80d3ad85d6a3a6249d5073d77d0a99e4"
+  },
+  "src/native/altscreen111-gen2/include/alt111_policy.h": {
+    "origin": "Harman public policy dependency; byte-identical to tested build dependency",
+    "sha256": "8df6e04759f183d641d4c3d7dbccb696cb20923ded047be89528aa63305f96e8"
+  },
+  "src/native/altscreen111-gen2/include/alt111_zoom.h": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "f8db2017a7fafba41d023444ecae91aa21ef6bde912788b0164fbed7698e2197"
+  },
+  "src/native/altscreen111-gen2/include/alt111_zoom_debugspi.h": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "298fa6051a04a1815f1424b15c609dde60a3f71c45f6bed4aeeefde3ed3f3784"
+  },
+  "src/native/altscreen111-gen2/libaltscreen111_gen2.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "06e388e644801525188e2632177e27f8612429bc643a48b765bcf762ab493929"
+  },
+  "src/native/altscreen111-gen2/seat_geometry.inc": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "65ee750e9ab6b6487c462b1b28f471cf4a2d9f87a3ba61d9fb508b7a3ef499c4"
+  },
+  "src/native/altscreen111-gen2/seat_settings.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "50065a2576d2c11851547bb8b640c68163a04797d32f253e7f5ca662c1f7e935"
+  },
+  "src/native/altscreen111-gen2/seat_settings.h": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "377880978c7bbff995317d82c657ec621df98d6d25b26d28304c09a5b0d24516"
+  },
+  "src/native/altscreen111-gen2/seat_views.inc": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "71abbb63e4471d5b0e985c22b35cf8000d21a2c6fdbbb660d5e9f27bd3eebefa"
+  },
+  "src/native/altscreen111-gen2/seat_zoom_pilot.inc": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "603b389dfa01a2d93efd8fb30daf6994e6e2935a3a74468fb93b9d6a185fa17c"
+  },
+  "src/native/altscreen111-gen2/src/alt111_control.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "0b315260a39822e13308b0d54f97ee0013fcfda946ea0b940dd5434c16317a6d"
+  },
+  "src/native/altscreen111-gen2/src/alt111_policy.c": {
+    "origin": "Harman public policy dependency; byte-identical to tested build dependency",
+    "sha256": "25dd6be685c17162a58feae885a429fc98da5effd3d2973ea459f76db665e744"
+  },
+  "src/native/altscreen111-gen2/src/alt111_profile.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "c2e1e4b8c64145075eee8833ab0894bf380107410daa78deab3165daad70d008"
+  },
+  "src/native/altscreen111-gen2/src/alt111_resync.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "19f9ed3fba4cd41a70b748671ff5a63f9af356c8d1ee502f53c70ba271189356"
+  },
+  "src/native/altscreen111-gen2/src/alt111_video.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "1a817f5635dc3bbfe88ac50698a1ab8cad8bd940f5c529d3317a2a1efbca57f8"
+  },
+  "src/native/altscreen111-gen2/src/alt111_zoom.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "d7b37c59aabee413fa22183bf6babe149c4bfe3296fbd527ce9ec1edc13a8815"
+  },
+  "src/native/altscreen111-gen2/src/alt111_zoom_debugspi.c": {
+    "origin": "Latest tested MU1409 scaled receiver + bounded queue recovery",
+    "sha256": "d5c4c432c3063414cd3500f8925dbae0c94dbaeac4109dbf24c0c0cba8d53507"
+  },
+  "src/native/common/most_owner.h": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "c87742e33c019cb1c2476f7bd00c83bf88f723fb65de38bf3120c0683e7edb41"
+  },
+  "src/native/direct-ts-remux/PROVENANCE.md": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "c0e82fdeaebc4a678ccca28c769a4cb120c44c4f29cfc90a7091b623d07b0a36"
+  },
+  "src/native/direct-ts-remux/direct_ts_remux.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "194ae70be1c8a677f77c48aea84f23285657bd548ecb60df16af6d10773a91cc"
+  },
+  "src/native/isotx2-gate/gate_selftest.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "279e274edb671814cb3520fb6f1dff7c40d60654d0f0e53f39de73616c97cc11"
+  },
+  "src/native/isotx2-gate/isotx2_gate.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "9c900cacf35791fe05aa5220979c987b4455ebfbc6ffbf80efb3f5368fc3234e"
+  },
+  "src/native/isotx2-gate/owner_probe.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "74526313897c55bfd59a31d788f342442c18952596cbcd772b5388cb34ee352c"
+  },
+  "src/native/isotx2-gate/owner_unlock.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "c664fed77c5e864836d6908593912b1f3af3a6ac6336837fa5d9d57c7d8c7a1d"
+  },
+  "src/native/keypanel/mibr_keypanel_native.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "1ed12065565492248e57dd4cd7b9b723ed664f900d5b9e15f2cb287fc391b51c"
+  },
+  "src/native/mibr-control/mibr_control.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "7cdc89f82ab88b384cb4ac2e9e4c70b8a2c7866c126cdb33f03927d7e75b3137"
+  },
+  "src/native/mibr-control/mibr_key40d.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "878edb0044c48158dfa0463b977e6e90d73b3d8e00508395f362d5c7913c4ee6"
+  },
+  "src/native/mibr-control/mibr_v3_client.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "487fa0298ac55b80cf4a53ed9f686a7d7e4b6b3240ad4cccc6c2431e667649ea"
+  },
+  "src/native/mibr-control/mibr_v3_genkey.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "a51921f30a3f628b5c27169cc8cc2aa5dc557b89c0f572350d6c1cf3617b6415"
+  },
+  "src/native/mibr-control/mibr_v3_host_harness.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "4f6bf63eb636625f9d66702dc01b7b3dae4c81ee9a5e96e8646aecfe1702f65c"
+  },
+  "src/native/mibr-control/mibr_v3_input_bridge.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "d19396813ab4830a0f307640aec7ab4c28ce68dfef22a02ea9080441fa9db7ff"
+  },
+  "src/native/mibr-control/mibr_v3_input_bridge.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "21d22a03a90b3fc001af7c3d38eeb84e71b386822e5c8b8a8060c676aba76a88"
+  },
+  "src/native/mibr-control/mibr_v3_key40.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "114f4b8302340c36bbec112d59639791d11bdafbe6f30e84a73b64a66fcaeffe"
+  },
+  "src/native/mibr-control/mibr_v3_key40.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "293b2049a13f7a74581083c3a5bd7176eabd14e3108878e6b164f63459eeab65"
+  },
+  "src/native/mibr-control/mibr_v3_key40_oem_seam.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "726589f3a62e1935415199fc4d0e6eebaa8c84cc7ebfe80faa558f820ced5881"
+  },
+  "src/native/mibr-control/mibr_v3_key40_oem_seam.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "1004f29c2019f4d811df498649b786b5de06961848b5f3723b58ccb8f679a6fe"
+  },
+  "src/native/mibr-control/mibr_v3_key40_oem_seam_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "7f697549055cfaaa2ef702b8018c648d6a59de48cb46b48941f9820c150173cd"
+  },
+  "src/native/mibr-control/mibr_v3_key40_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "b26ee8aab547ff44922bc6fa516d941191b5b6fcd294742d07255478aaba856d"
+  },
+  "src/native/mibr-control/mibr_v3_owner_gateway_adapter.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "79a354e3e327102f91f588b2f67136c6385ac95fd9a7d991ec6a11c6006db102"
+  },
+  "src/native/mibr-control/mibr_v3_owner_gateway_adapter.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "6946f494cbfab3cfac4c4adef3529d2776ca00cef69280545d8af7374bc46516"
+  },
+  "src/native/mibr-control/mibr_v3_owner_gateway_adapter_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "82295769fbe1df149d9d46d80493d22298a5f2099140f2895ef7cb7c6540a9b7"
+  },
+  "src/native/mibr-control/mibr_v3_owner_lifecycle.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "843eb3f5a1bb642638cfd907f18bf4fd9183bb50946f840a25e581b86dd46ecf"
+  },
+  "src/native/mibr-control/mibr_v3_owner_lifecycle.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "7dec6306ab026b15749bfab8f0d199c56238f6c784b6822b1d14b3267787e9c1"
+  },
+  "src/native/mibr-control/mibr_v3_owner_lifecycle_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "fb812a46c42a60231ca79cf31a7bc79b241ed96744735864bfb09ea41446c334"
+  },
+  "src/native/mibr-control/mibr_v3_parity_mailbox.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "0490850d061cd5846788731d75e81de07c2495113469dc8b0015c1b8a87fbc78"
+  },
+  "src/native/mibr-control/mibr_v3_parity_mailbox.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "ee876ec6c81d4c78d346bfffc58154415078de1fa11748eebc6ea02b84f42b30"
+  },
+  "src/native/mibr-control/mibr_v3_parity_mailbox_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "366c5861281f1e139e01fa384d0228dbc80167aedecec917c25f1a9faa3b478b"
+  },
+  "src/native/mibr-control/mibr_v3_parity_target_bridge.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "b987e49f7907517594b92a3c4e1c0010b02f087b38203d484e9465d42e5a5c2c"
+  },
+  "src/native/mibr-control/mibr_v3_parity_target_bridge.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "bd26cefba22a7383b4fab9116e2ea690bb93bcc79352e3710095ce5c3c88ca1b"
+  },
+  "src/native/mibr-control/mibr_v3_parity_target_bridge_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "83ace59f8010200d802455959d394c0442a3f4a1d699faf2f2fdcd9ee308dbdc"
+  },
+  "src/native/mibr-control/mibr_v3_profile_store.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "b9d91120214f6d4cfe041d82469d3646ce2ec1be08b3b90bd638800b0c68e582"
+  },
+  "src/native/mibr-control/mibr_v3_profile_store.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "27525e555b0c6a49ec2026461b99aa37aa850366f7956a968a31284d41f68bc2"
+  },
+  "src/native/mibr-control/mibr_v3_qnx_mount.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "e2ba5b36c15df030173791c86f3be928c5a7b6220b141f42a5da776966e7c979"
+  },
+  "src/native/mibr-control/mibr_v3_qnx_mount.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "55b5f2f25f4297fc5208be9da97911945e18aae60b1a8fca50a7466b01b7d6e9"
+  },
+  "src/native/mibr-control/mibr_v3_readonly.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "4f9dd92154b38bbdc701b81b4cb47bc00773cdcdff869051bca3b5739c057bcb"
+  },
+  "src/native/mibr-control/mibr_v3_readonly.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "ed5db3159953179bc610b91c20bf4d365a2cae63d7396dcf4db834e19ef8e2f4"
+  },
+  "src/native/mibr-control/mibr_v3_recovery_gate.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "a5806277ceb72d72029b0027ddd033168105d95d9f0987afd84fa850b2898608"
+  },
+  "src/native/mibr-control/mibr_v3_recovery_gate.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "add41fb66dd145db8e618ebad8d182ac1902d6eec44b97c53e7c20a832ef4eaa"
+  },
+  "src/native/mibr-control/mibr_v3_recovery_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "e4a3c71b83ed63de31b153675d47eb4b2d2ce6bbe8fd2489e45902608ca1959e"
+  },
+  "src/native/mibr-control/mibr_v3_route_gateway.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "e2d36359a0a402252c404044bc72c0e9092a7b76872e4fd846cd40c8df7a7572"
+  },
+  "src/native/mibr-control/mibr_v3_route_gateway.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "29b8282f3a3fd9a7840737e723bff39ffeabd86c5fae450d6769750787de93ad"
+  },
+  "src/native/mibr-control/mibr_v3_route_gateway_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "c8456c46f993a5a8511517ce52de2eb92c5f984995bdc3dcb79a7b0ba0fd0c90"
+  },
+  "src/native/mibr-control/mibr_v3_runtime_observer.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "40cf5b2176f71a7aabeb11d25ecc3a161035435ef962b6f00245eda8c800a06a"
+  },
+  "src/native/mibr-control/mibr_v3_runtime_observer.h": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "cdc2cc41cce3a0fd7826f4c261cabf956bfe693ccba90a17349181ce7521b40a"
+  },
+  "src/native/mibr-control/mibr_v3_runtime_probe.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "f65f74c4fe1bb8c1691598ac21c62d738328b1308c5da38ef91dba9ff4c0294c"
+  },
+  "src/native/mibr-control/mibr_v3_service.c": {
+    "origin": "Harman R13 project-owned source, publication permission confirmed by owner; local SEAT integration changes",
+    "sha256": "a4eb39ba176de596edd3af75df5a3d97949ba77992c4c0210779fcbf187c16dc"
+  },
+  "src/native/most-ts-writer/most_ts_writer.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "cbe3fcb1c52a548e0be9498847e6503efa72439bd59dd7552c527081d7a36f5e"
+  },
+  "src/native/seat-tools/profile-tool.c": {
+    "origin": "Project-owned SEAT integration",
+    "sha256": "1411a4124d92fa4d7152e5735e1b8b09f4a40669bbbfc5fd6c4834ca3ef4a7de"
+  },
+  "src/native/seat-tools/storage_probe.c": {
+    "origin": "Project-owned SEAT integration",
+    "sha256": "1636635b5c76bf2526f2dfd1e77a8c6f6443aced52b4fe1a7adf18a7b8240238"
+  },
+  "src/native/sha256sum-compat/sha256sum_compat.c": {
+    "origin": "Harman public main 10229162cb15c767656645bb256b9a7aebc5fd5a",
+    "sha256": "7d94cbbc4dede976fd9d31d2633c495d0eef5c369284b5b2543c82cb03b85cc6"
+  },
+  "src/native/tee-compat/tee_compat.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "23cdeba922aa719ac890117b56c45cfd2f4510e23d337d3b6aa2ddc4c08f29fa"
+  },
+  "tests/menu/MibrCanonicalElementMenuTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "0bc489d35a309b14b4142fb892cf5499f363ef032ad64a13105b39dde5942fa4"
+  },
+  "tests/menu/MibrCarPlayMenuModelTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "d9eee3a386f1da7a0510afd24a63a36af4999b241e6d6ce6c78c0c87a88d0db5"
+  },
+  "tests/menu/MibrDraftChoiceModelTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "4694d82612d9c045bee5b0bb8b7f353bdac7ae4e6071078d1e44c932ea31de30"
+  },
+  "tests/menu/MibrEngineStateTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "90d5fe57f1edae0203cbda604a818c0943c3ee0f8281c4ec68256e1959dab31d"
+  },
+  "tests/menu/MibrPopupEditorModelTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "5bd50263faa3e9c608457908c7e2371febcb79612f04b97b8c3bf7dbeb8691ba"
+  },
+  "tests/menu/MibrSpeedObserverTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "057407fc8613837467efa33073e88ed2dd424fb621f50d42807dc1412ad055e8"
+  },
+  "tests/menu/MibrV3BindingTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "83bde23a093e60650f997d58df08388c5c3fa9b6d098cc30837ee829aab0300c"
+  },
+  "tests/menu/MibrV3BusyTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "dc78fdbe33b1435ad4f4b31b0229858dd9a02416f880fad86fb7492d8a7c0608"
+  },
+  "tests/menu/MibrV3QueueTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "545dd8d2a2e3ffd9e0162b7b5a60a0fe2ced1076d30db5bed31354c34e163882"
+  },
+  "tests/menu/MibrV3ShowTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "c32f02c11fbefb2d061b4cc03591750d6ffef9537dd991c74bae2e5739c68c5f"
+  },
+  "tests/menu/MibrV3VerbTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "6400e77d4b55bd8fe1b5854db4030e5d06925ccec3826fe7decc9c11b7141411"
+  },
+  "tests/menu/MibrVdataDiagTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "3de4d42b1d5b13bf7f010e28a869a279395aa28382d0fdcb2afd880a71ba4962"
+  },
+  "tests/menu/MibrViewStateTest.java": {
+    "origin": "Authorized Harman project-owned host tests",
+    "sha256": "b0d5fa008ace6e42bfdcd27e8849ee9077a7115188c22e78c3e108ac76b1439a"
+  },
+  "tests/menu_indicator_host.py": {
+    "origin": "Project-authored public handoff integration, documentation or build recipe",
+    "sha256": "dc6b9230bb870f701e2766e44e03955d3f52f0da780b8e22413c9aab99c7b2c1"
+  },
+  "tests/mu1409/owner_fixture.c": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "1bb9e1085859800b87fb4cf522a5419914a6d51b58169ec45f3c4026868a278c"
+  },
+  "tests/mu1409/test_owner.py": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "c2cb9b16a5e2ae7d5923da4ca02d2de66bc4da59cd5de593b38e95d512f2fdbb"
+  },
+  "tests/receiver_queue_test.c": {
+    "origin": "Project-owned overflow regression used for the tested build",
+    "sha256": "77735da3aa4847d4c2badbbcc4a65610f0c17d66759b1bda9ae0143f671cbe57"
+  },
+  "tests/receiver_view_test.c": {
+    "origin": "Project-owned target-view regression",
+    "sha256": "90e723aa39e1fc291ebe3e59a0f0f8d144aad1c6c5801f628766f3c7dbb45103"
+  },
+  "tools/build_altscreen111_gen2.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "4b39ac33c496bde0b57e2492dbcc97cb8391de0c10aa8c132df337d330ede17b"
+  },
+  "tools/build_direct_ts_remux.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "d836e67a4def67a544970870243284127853bc1aa69846d2d4898cbc260fee7e"
+  },
+  "tools/build_keypanel_native.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "d392de17de0ac36f31eefdc2ec17b2db3226b2383398eb21bbc2803c95142ef2"
+  },
+  "tools/build_support_tools.sh": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "750061c52de90ee93621ef0ae0976fb072d0272ad1c75e32a31f0c6b573abf7d"
+  },
+  "tools/check_mu1440_target_shell.py": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "aa5cc7dc184f63d5d8359b7af1d2a584eea17bb17a67149e0915812b2a7dec7d"
+  },
+  "tools/decode_keypanel_f902.py": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "6af49356f031928507cdfa05ee7ca6a4cc80c36bc6cbb5e48fefb02ea63bbbfb"
+  },
+  "tools/fixtures/README.md": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "7516b02facd6c3eaae1ccf48a6ea97ec31f827be391241dede58a8edfaf10ade"
+  },
+  "tools/fixtures/generate_mu1440_motion_m1au.py": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "4fad341b8ebf01576ddf494457e3253ea7c8c835f508cd058c23d906abfc9049"
+  },
+  "tools/parse_keypanel_trace.py": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "63416439fecf08e5647608ce6317481c4fd923b098efde750cb5ab4e624fad5f"
+  },
+  "tools/split_navactiveignore.py": {
+    "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
+    "sha256": "e1208ceba6fd7d0785c5bdcf259ac874e7713857394679a0bc8472e77f915967"
+  }
+}

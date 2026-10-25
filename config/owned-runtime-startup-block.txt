@@ -1,0 +1,4 @@
+# MU1409 WP1 automatic controller: normal boot only; detached, STOCK until video.
+if [ "$RUN_MODE" = "normal" ] && [ -e /mnt/app/root/altscreen-u2/config/autostart.enabled ] && [ -x /mnt/app/root/altscreen-u2/scripts/boot_autostart.sh ]; then
+    on -d -f mmx /bin/ksh /mnt/app/root/altscreen-u2/scripts/boot_autostart.sh > /tmp/mibr-autostart.log 2>&1 &
+fi

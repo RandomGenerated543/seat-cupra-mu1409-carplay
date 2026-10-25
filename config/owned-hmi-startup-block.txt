@@ -1,0 +1,9 @@
+# SEAT_R13_MIGRATION_BEGIN -- one menu and one settings broker
+if [ "$RUN_MODE" = normal ] && [ -r /mnt/app/root/altscreen-u2/harman-r13/enabled ];then
+    BOOTCLASSPATH="$BOOTCLASSPATH -Xbootclasspath/p:/mnt/app/root/altscreen-u2/harman-r13/menu.jar:$BASE_DIR/lsd/jars/NavActiveIgnore.jar"
+    VMOPTIONS="$VMOPTIONS -Dmibr.control.v3.devtest=1 -Dmibr.control.v3.port=28743 -Dmibr.control.v3.secretFile=/tmp/mibr-seat-r13.secret"
+    ( unset LD_PRELOAD; /bin/ksh /mnt/app/root/altscreen-u2/harman-r13/boot.sh ) >> /tmp/mibr-seat-r13-boot.log 2>&1 &
+else
+    BOOTCLASSPATH="$BOOTCLASSPATH -Xbootclasspath/p:$BASE_DIR/lsd/jars/NavActiveIgnore.jar"
+fi
+# SEAT_R13_MIGRATION_END

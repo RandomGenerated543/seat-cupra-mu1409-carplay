@@ -15,7 +15,7 @@ def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def assemble(inputs, baseline, out, root):
     spec = json.loads((root / "deployment/full-install/inputs.json").read_text())
     reference = json.loads((root / "deployment/full-install/reference-baseline.json").read_text())["files"]
-    if out.exists() or out.with_suffix(".zip").exists():
+    if out.exists() or Path(str(out) + ".zip").exists():
         raise ValueError("Select a fresh output directory")
     # Validate the external originals used for local-only firewall generation.
     for name in ["pf.conf", "pf.mlan0.conf"]:
@@ -112,10 +112,10 @@ def assemble(inputs, baseline, out, root):
     (out / "ASSEMBLY.json").write_text(json.dumps({"status": "HOST_ASSEMBLED_VEHICLE_UNTESTED", "inputs": used, "final_receiver": sha(out / receiver), "target_count": len(targets), "intermediate_receivers_installed": False}, indent=2) + "\n")
     files = sorted(p for p in out.rglob("*") if p.is_file())
     (out / "KIT.sha256").write_text("".join(sha(p) + " " + str(p.relative_to(out)) + "\n" for p in files))
-    with zipfile.ZipFile(out.with_suffix(".zip"), "w", zipfile.ZIP_DEFLATED) as z:
+    with zipfile.ZipFile(Path(str(out) + ".zip"), "w", zipfile.ZIP_DEFLATED) as z:
         for p in sorted(out.rglob("*")):
             if p.is_file(): z.write(p, out.name + "/" + str(p.relative_to(out)))
-    print("CONSOLIDATED=ASSEMBLED_LOCAL_ONLY targets=%d zip_bytes=%d vehicle_acceptance=UNTESTED" % (len(targets), out.with_suffix(".zip").stat().st_size))
+    print("CONSOLIDATED=ASSEMBLED_LOCAL_ONLY targets=%d zip_bytes=%d vehicle_acceptance=UNTESTED" % (len(targets), Path(str(out) + ".zip").stat().st_size))
 
 
 if __name__ == "__main__":

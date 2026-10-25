@@ -297,7 +297,7 @@
   },
   "scripts/assemble_consolidated_install.py": {
     "origin": "Project-authored final-stack installation/qualification tooling and documentation",
-    "sha256": "6425d44ad4413c662d7696e2cf2292a07ee890323a632d471eec39d6f3513423"
+    "sha256": "b524e759b7f1d25d675effef6a4e3f5523087762800d082700abb9a2a9d67694"
   },
   "scripts/audit_publication.py": {
     "origin": "Project-authored public handoff integration, documentation or build recipe",

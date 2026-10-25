@@ -9,4 +9,5 @@ with tempfile.TemporaryDirectory() as tmp:
         subprocess.run([cc,"-std=c99","-Wall","-Wextra","-Werror","-I"+str(n/"include"),str(r/"tests"/(test+".c")),str(n/"src"/(source+".c")),"-o",str(out)],check=True)
         subprocess.run([str(out)],check=True)
 subprocess.run([os.environ.get("PYTHON","python3"),str(r/"tests/menu_indicator_host.py")],check=True)
+subprocess.run([os.environ.get("PYTHON","python3"),str(r/"tests/consolidated_install_test.py")],check=True)
 print("HOST_CHECKS=PASS vehicle_execution_not_established")

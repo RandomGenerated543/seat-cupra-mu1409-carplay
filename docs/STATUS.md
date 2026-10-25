@@ -21,6 +21,10 @@ qualified target stack. The source files do not constitute universal compatibili
 
 ## Outstanding
 
+The consolidated v0.2 fresh-install candidate is now assembled locally;
+see CONSOLIDATED_INSTALL.md and INSTALL_VALIDATION.md. This adds an installation
+route, not a new claim of vehicle acceptance.
+
 - Repeated cold boot, phone reconnect, longer runs and independent restoration
   of the combined latest state.
 - Red scrollbar appearance and repeated menu re-entry.

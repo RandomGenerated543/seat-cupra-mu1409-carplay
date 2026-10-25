@@ -5,6 +5,11 @@
 The recorded target is MHI2_ER_SEG11_P4708_1 / MU1409 with the fitted 790-family
 cockpit. A similar firmware name, MU number or brand is insufficient.
 
+For installation after removing omonob, use CONSOLIDATED_INSTALL.md and the locally
+assembled final-stack candidate. Its exact-baseline preflight must accept
+the post-uninstall baseline. The requirements below for an existing project
+stack apply to the separate receiver-only updater, not to the initial WP1 step.
+
 Before vehicle testing, establish exact hashes of libairplay.so, dio_manager,
 displaymanager, smartphone_integrator, lsd.jxe and live startup/configuration.
 The historical reference hashes are in config/mu1409-reference-hashes.sh;

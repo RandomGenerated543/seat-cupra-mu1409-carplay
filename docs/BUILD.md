@@ -72,9 +72,16 @@ The output is build/menu/LOCAL-ONLY-menu.jar, class major 46. It includes the
 locally supplied OEM-derived hooks and is deliberately ignored by Git.
 Keep it local. A compiled JAR is not vehicle/menu/Back/focus acceptance.
 
+## Consolidated final-stack bundle
+
+See CONSOLIDATED_INSTALL.md. `scripts/assemble_consolidated_install.py` assembles
+the final components supplied locally, verifies pinned input hashes, and produces
+a local-only ZIP under build/. It does not recompile missing inputs, download
+OEM files or synthesize compatibility approval for another baseline.
+
 ## Installation boundary
 
-No automatic fresh installation is claimed. Building source does not create a
-generic supported SD installer. The receiver upgrade works only on the exact
+No universal fresh installation is claimed. Building source does not create a
+generic supported SD installer. The separate receiver upgrade works only on the exact
 already-matching project baseline. For another unit, perform exact firmware,
 loader, startup, media-owner, Java and recovery qualification first.

@@ -1,0 +1,96 @@
+{
+  "release": "experimental-2026-10-30",
+  "date": "2026-10-30",
+  "assets": [
+    {
+      "file": "HW301-CXZ521-app20260122129-v0.1.zip",
+      "folder": "HW301-CXZ521-app20260122129-v0.1",
+      "kind": "adapter",
+      "target": "HW301 / CXZ521; original APP HW301_20250630126, system 20250320; candidate vendor v129 / HW301_20260122129",
+      "bytes": 14878905,
+      "sha256": "093cfdd6956de3b62139c138296b293076db979c4b8475d5c888ae2a67333895",
+      "status": "Owner reports working on 2026-10-30; not independently retested"
+    },
+    {
+      "file": "AX1800M-Suding-system202504180933CA-protocol20261008165747-v0.2.zip",
+      "folder": "AX1800M-Suding-system202504180933CA-protocol20261008165747-v0.2",
+      "kind": "adapter",
+      "target": "AX1800M / suding / v851se-yunlian-cp; system 202504180933CA; protocol 20261008165747",
+      "bytes": 2272827,
+      "sha256": "72e4a467d1822834f6d57e515c0cbdf4a48f038a149867c2b4efee775be25406",
+      "status": "Owner reports working on 2026-10-30; not independently retested"
+    },
+    {
+      "file": "Mini5Pro-AX1800-Yunlian-system202603120932CA-protocol20260109175612-v0.2.zip",
+      "folder": "Mini5Pro-AX1800-Yunlian-system202603120932CA-protocol20260109175612-v0.2",
+      "kind": "adapter",
+      "target": "Mini 5 Pro / AX1800 / yunlian / v851se-yunlian-cp; original system 202504171406CA, protocol 20250415195209; full March base system 202603120932CA, protocol 20260109175612",
+      "bytes": 28717116,
+      "sha256": "b8df3bbf92cdefba02c8f7a7e28ffadf24c0ef5fe188bcc347915a062a9f7184",
+      "status": "Owner reports working on 2026-10-30; not independently retested"
+    },
+    {
+      "file": "AX1800M-Suding-system202603120956CA-protocol20261008165747-v0.2.zip",
+      "folder": "AX1800M-Suding-system202603120956CA-protocol20261008165747-v0.2",
+      "kind": "adapter",
+      "target": "AX1800M / suding / v851se-yunlian-cp; system 202603120956CA; original protocol 20260109175612, candidate October protocol 20261008165747",
+      "bytes": 1520406,
+      "sha256": "250dc4573ec0c9e651c3b8ccd7d86d31a93600c6178df34e60f3a3c94e466dea",
+      "status": "Owner reports working on 2026-10-30; not independently retested"
+    },
+    {
+      "file": "SEAT-MU1409-final-stack-v0.2.1-baseline-A.zip",
+      "folder": "SEAT-MU1409-final-stack-v0.2.1-baseline-A",
+      "kind": "full-install",
+      "target": "SEAT/Cupra P4708/P4708_1 MU1409; exact baseline A firewall hashes",
+      "bytes": 1054509,
+      "sha256": "7d3944e5056634465b36f1f285a58f58a2612322537737b23b89bce80a9e1675",
+      "status": "Retained built/host-tested package; owner reports latest SEAT features working overall, individual configuration acceptance is not independently retested"
+    },
+    {
+      "file": "SEAT-MU1409-final-stack-v0.2.1-baseline-B.zip",
+      "folder": "SEAT-MU1409-final-stack-v0.2.1-baseline-B",
+      "kind": "full-install",
+      "target": "SEAT/Cupra P4708/P4708_1 MU1409; exact baseline B firewall hashes",
+      "bytes": 1055840,
+      "sha256": "ece935ccc8782c3d0342ee2f73a8c2084c5233dfcb76fec9cd6482c3760b892d",
+      "status": "Retained built/host-tested package; owner reports latest SEAT features working overall, individual configuration acceptance is not independently retested"
+    },
+    {
+      "file": "MU1409-menu-zoomfactor-v0.1.zip",
+      "folder": "MU1409-menu-zoomfactor-v0.1",
+      "kind": "unit-update",
+      "target": "Existing matching SEAT MU1409 project stack; cockpit menu zoom 70\u2013150% plus omit",
+      "bytes": 411313,
+      "sha256": "043765a749203a1ded9b1651721ddcd1fd31c7a2411bc0f606069a8cc38720d9",
+      "status": "Retained built/host-tested package; owner reports latest SEAT features working overall, individual configuration acceptance is not independently retested"
+    },
+    {
+      "file": "MU1409-main-display-zoom-v0.1.zip",
+      "folder": "MU1409-main-display-zoom-v0.1",
+      "kind": "unit-update",
+      "target": "Existing matching SEAT MU1409 stack; centre-screen metadata zoom 70%; fixed/menu cockpit baselines",
+      "bytes": 539642,
+      "sha256": "b9ae7227cfcdea0e4424c70cab04a6e5bcef9fcb6aabd4dbd2e7ef68a3c77205",
+      "status": "Retained built/host-tested package; owner reports latest SEAT features working overall, individual configuration acceptance is not independently retested"
+    },
+    {
+      "file": "MU1409-media-info-v0.1.zip",
+      "folder": "MU1409-media-info-v0.1",
+      "kind": "unit-update",
+      "target": "Existing matching SEAT MU1409 stack; VC Audio/Media title, artist, album",
+      "bytes": 59218,
+      "sha256": "3e5167fba90a2d3ed458ee9354b8ee62e886f1afe803718330037efe3a2e83bf",
+      "status": "Retained built/host-tested package; owner reports latest SEAT features working overall, individual configuration acceptance is not independently retested"
+    },
+    {
+      "file": "MU1409-wide-safearea-v0.1.zip",
+      "folder": "MU1409-wide-safearea-v0.1",
+      "kind": "unit-update",
+      "target": "Existing matching three-view SEAT MU1409 profile; Wide 708x244@151,56 -> 628x220@191,56",
+      "bytes": 6094,
+      "sha256": "755ac533022534909910f1722f1b17abd8a9079e195a41742351c3f1687a83f5",
+      "status": "Retained built/host-tested package; owner reports latest SEAT features working overall, individual configuration acceptance is not independently retested"
+    }
+  ]
+}

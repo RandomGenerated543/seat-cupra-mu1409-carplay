@@ -29,6 +29,8 @@ Unofficial project for the SEAT/Cupra **MHI2_ER_SEG11_P4708 / P4708_1, MU1409** 
 
 The owner reports all four adapter configurations working as of **30 October 2026**. This is an operator report, not independent acceptance of every iOS/app/hardware combination. Original package validation notes retain their build-time status. Centre-screen icon-row count, every setting, touch alignment, reduced-view placement and long-term reliability are not universally qualified. See [release notes](docs/RELEASE_2026-10-30.md).
 
+[Open issues and known limitations](docs/OPEN_ISSUES.md) include Waze zoom, reduced-view ETA/directions, media scope and recovery. Adapter functional tests must be in the actual car; after a completed flash, forget the old phone pairing and pair again.
+
 ## Source and firmware boundaries
 
 The repository includes the SEAT-specific C/Java/shell port, latest cockpit menu zoom/settings changes, media bridge source, installer/build tools, tests, source archives and documentation. [The release](https://github.com/RandomGenerated543/seat-cupra-mu1409-carplay/releases/tag/experimental-2026-10-30) provides complete versioned runtime ZIPs with their own guarded installers/uploaders and rollback inputs. Source and runtime downloads serve different purposes.

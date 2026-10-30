@@ -850,6 +850,33 @@
       "reference_override": "deviation_visible",
       "min": 0,
       "max": 0
+    },
+    {
+      "key": "display.zoomFactor",
+      "basename": "mibr-carplay111-zoomfactor",
+      "field": "",
+      "type": "enum",
+      "allowed": [
+        "0",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140",
+        "150"
+      ],
+      "default": {
+        "classic_single_view": "70",
+        "mibr_dual_view": "70",
+        "mibr_legacy": "70"
+      },
+      "apply": "reconnect",
+      "hmi": "advanced",
+      "read_only": false,
+      "reference_override": "deviation_visible"
     }
   ]
 }

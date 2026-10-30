@@ -1169,7 +1169,7 @@ static int gen2_video_submit_au(const uint8_t *p, size_t n, int *accepted, int *
     pthread_cond_broadcast(&g2_core_cv);
     pthread_mutex_unlock(&g2_core_lock);
     if (rc == ALT111_SOFT_RESYNC) {
-        logf_u2("QUEUE_RECOVERY revision=seat_raw_v1 event=overflow queued_before=%u bytes_before=%zu consumer_retained=1 zoomFactor=70",queued_before,bytes_before);
+        logf_u2("QUEUE_RECOVERY revision=seat_raw_v1 event=overflow queued_before=%u bytes_before=%zu consumer_retained=1",queued_before,bytes_before);
     } else if (rc == ALT111_RESTART_CONSUMER || rc < 0) {
         logf_u2("gen2 video AU rc=%d body=%zu -> consumer reset", rc, n);
         gen2_close_consumer();
@@ -2239,8 +2239,24 @@ CFDictionaryRef AirPlayCopyServerInfo(AirPlayReceiverSessionRef session, CFArray
          * Lowercase key is read by CARScreenInfo on iOS 26.1.
          * iOS acceptance/custom-zoom gate remains unverified.
          */
-        set_i64(alt,"zoomFactor",70);
-        logf_u2("IOS_ZOOM_TEST revision=lower70_v1 scope=type111 key=zoomFactor percent=70 phone_applied=UNKNOWN geometry_unchanged=1");
+        /* Freeze the canonical value for this receiver process. A menu save
+         * is desired state; it cannot silently alter an active negotiation. */
+        {
+            static int loaded=0;static unsigned factor=70;
+            static pthread_mutex_t factor_lock=PTHREAD_MUTEX_INITIALIZER;
+            pthread_mutex_lock(&factor_lock);
+            if(!loaded){
+                struct alt111_settings *settings=calloc(1,sizeof(*settings));
+                struct alt111_settings_paths paths={"/tmp","/mnt/app/root"};char error[128];
+                if(settings && !alt111_settings_load(&paths,settings,error,sizeof(error)))
+                    factor=alt111_setting_integer(settings,ALTSET_DISPLAY_ZOOMFACTOR);
+                else logf_u2("SEAT_ZOOM_FACTOR settings_unavailable fallback=70");
+                free(settings);loaded=1;
+            }
+            pthread_mutex_unlock(&factor_lock);
+            if(factor)set_i64(alt,"zoomFactor",factor);
+            logf_u2("SEAT_ZOOM_FACTOR revision=menu_v1 scope=type111 percent=%u property=%s phone_applied=UNKNOWN geometry_unchanged=1",factor,factor?"numeric":"omitted");
+        }
 
         set_str(alt,"uuid",g_alt_uuid);
         set_str(alt,"initialURL",active_url);

@@ -65,7 +65,10 @@ def main():
     with tempfile.TemporaryDirectory() as t:
         run, originals, immutable, profile, kit = fixture(Path(t))
         before = {p: p.read_bytes() for p in originals}
+        anchor = Path(t) / "mnt/app/root/altscreen-u2/wp2"
+        assert not anchor.exists()
         r = run("--check"); assert r.returncode == 0, r.stdout + r.stderr
+        assert not anchor.exists(), "Read-only preflight created storage anchor"
         assert all(p.read_bytes() == data for p, data in before.items())
         assert not profile.exists() and not (Path(t) / "mnt/app/root/seat-full-install-v02-backup").exists()
         immutable.write_text("wrong-target")
@@ -73,6 +76,8 @@ def main():
         assert all(p.read_bytes() == data for p, data in before.items())
         immutable.write_text("native-baseline")
         r = run("--apply"); assert r.returncode == 0, r.stdout + r.stderr
+        assert anchor.is_dir() and not anchor.is_symlink(), "Fresh install omitted storage probe anchor"
+        assert not (anchor / "enabled").exists(), "Retired WP2 service enabled"
         assert all(p.read_bytes() != data for p, data in originals.items())
         r = run("--apply"); assert r.returncode == 0, r.stdout + r.stderr
         profile.write_text("user-edited-preferences\n")
@@ -97,6 +102,20 @@ def main():
         assert r.returncode != 0 and "ACTIVATION_FILES_ROLLED_BACK" in r.stdout, r.stdout + r.stderr
         assert all(p.read_bytes() == data for p, data in originals.items())
         r = run("--restore-check"); assert r.returncode == 0, r.stdout + r.stderr
+    for symlink in [False, True]:
+        with tempfile.TemporaryDirectory() as t:
+            run, originals, immutable, profile, kit = fixture(Path(t))
+            r = run("--apply"); assert r.returncode == 0, r.stdout + r.stderr
+            before = {p: p.read_bytes() for p in originals}
+            anchor = Path(t) / "mnt/app/root/altscreen-u2/wp2"
+            anchor.rmdir()
+            if symlink:
+                anchor.symlink_to(Path(t) / "foreign-storage")
+            else:
+                anchor.write_text("foreign file")
+            r = run("--apply")
+            assert r.returncode == 20 and "storage_anchor_" in r.stdout, r.stdout + r.stderr
+            assert all(p.read_bytes() == data for p, data in before.items())
     print("CONSOLIDATED_HOST=PASS readonly_preflight target_mismatch apply repeat user_preferences restore persistent_recovery activation_failure_rollback vehicle_probes_mocked=1")
 
 

@@ -13,11 +13,11 @@
 #define OUTPUT_MAX 16384u
 #define VALUE_MAX 512u
 #define FIELDS_MAX 64u
-#define UI_COUNT 11u
+#define UI_COUNT 12u
 static const char *const ui_keys[UI_COUNT] = {
     "carplay.enabled","viewarea.selected","navigation.surface",
     "navigation.ETA","navigation.speedLimit","navigation.compass",
-    "navigation.maneuver","navigation.url","preset.id","maxFPS","sourceVersion"
+    "navigation.maneuver","navigation.url","preset.id","maxFPS","sourceVersion","display.zoomFactor"
 };
 struct field { char key[65]; char value[VALUE_MAX+1u]; };
 struct request { char rid[65]; char op[32]; struct field f[FIELDS_MAX]; unsigned count; };
@@ -178,7 +178,7 @@ int mibr_v3_refresh(struct mibr_v3_reader *r,const struct alt111_settings_paths 
     /* Fail closed until a complete original-core snapshot has been loaded.
      * Caller serializes refresh and handle, including on QNX. */
     r->ready=0;r->stored_verified=0;r->stored_pending=0;
-    if(!paths||ALTSET_COUNT!=48u||
+    if(!paths||ALTSET_COUNT!=49u||
        alt111_settings_load(paths,&staged,err,sizeof(err)))return -1;
     r->cached=staged;
     r->ready=1;
@@ -287,7 +287,7 @@ int mibr_v3_handle(struct mibr_v3_reader *r,enum mibr_v3_role role,
         response_start(&w,req.rid,"OK");
         if(!strcmp(req.op,"HELLO")){
             field(&w,"version","MIBR/3");field(&w,"schema","2");
-            field(&w,"registry_keys","48");field(&w,"phase",r&&r->durable_set?"NATIVE_PROFILE_GUARDED":"NATIVE_READONLY_OFFLINE");
+            field(&w,"registry_keys","49");field(&w,"phase",r&&r->durable_set?"NATIVE_PROFILE_GUARDED":"NATIVE_READONLY_OFFLINE");
         }else if(!strcmp(req.op,"CAPABILITIES")){
             field(&w,"snapshot","1");field(&w,"durable_set",r&&r->durable_set?"1":"0");
             field(&w,"test_override","0");field(&w,"presentation_refresh","0");
@@ -471,7 +471,7 @@ int mibr_v3_handle(struct mibr_v3_reader *r,enum mibr_v3_role role,
         id=alt111_setting_find(key);
         if(id<0){error_frame(out,cap,req.rid,"INVALID_KEY");return -1;}
         /* Local SEAT adapter: preserve the qualified presentation/selection paths. */
-        if(strncmp(key,"navigation.",11) && strcmp(key,"viewarea.selected")){
+        if(strncmp(key,"navigation.",11) && strcmp(key,"viewarea.selected") && strcmp(key,"display.zoomFactor")){
             error_frame(out,cap,req.rid,"POLICY_BLOCKED");return -1;
         }
         if(role!=MIBR_V3_SHELL&&!is_visible(key)){
@@ -528,7 +528,8 @@ int mibr_v3_handle(struct mibr_v3_reader *r,enum mibr_v3_role role,
          * remount ro) took seconds before the cockpit saw anything. Write the
          * volatile TEMP layer and request the presentation first, then persist.
          * A verified durable failure reverts TEMP to the previous value. */
-        if(r->live_apply&&strcmp(r->cached.value[id],value)&&
+        /* Negotiation settings must be durably saved before acknowledging a restart. */
+        if(r->live_apply&&(unsigned)id!=ALTSET_DISPLAY_ZOOMFACTOR&&strcmp(r->cached.value[id],value)&&
            !r->live_apply(&r->paths,&r->cached,(unsigned)id,value,&live_revision)){
             live_done=1;
             if(r->presentation_request&&

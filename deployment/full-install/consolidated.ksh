@@ -109,6 +109,10 @@ if [ -d "$BACK" ];then backup_valid;else
  [ ! -e "$BASE" ] && [ ! -L "$BASE" ] || fail existing_project_tree_use_migration_not_fresh_install
 fi
 check_targets
+# The retained storage probe uses wp2 as its owned storage anchor, even though
+# the active broker lives under harman-r13. Never follow a foreign anchor.
+[ ! -L "$BASE/wp2" ] || fail storage_anchor_symlink
+if [ -e "$BASE/wp2" ];then [ -d "$BASE/wp2" ] || fail storage_anchor_not_directory;fi
 if [ "$MODE" = --check ] || [ "$MODE" = --apply ];then
  INVENTORY=$(pidin ar) || fail process_inventory
  for NAME in direct-ts-remux most-ts-writer stream-player altscreen-capture mibr-seat-service;do
@@ -186,6 +190,10 @@ while read KIND ID SRC TARGET BEFORE AFTER PERM;do
  [ "$KIND" = new ] || continue
  atomic "$ROOT/$SRC" "$TARGET" "$AFTER" "$PERM"
 done < "$ROOT/TARGETS.txt"
+# Create the retained probe's directory before enabling OEM startup hooks.
+# This creates no old WP2 enabled marker and starts no obsolete service.
+mkdir -p "$BASE/wp2" || fail storage_anchor_create
+[ -d "$BASE/wp2" ] && [ ! -L "$BASE/wp2" ] || fail storage_anchor_invalid
 CHANGING=1
 while read KIND ID SRC TARGET BEFORE AFTER PERM;do
  [ "$KIND" = replace ] || continue

@@ -1,4 +1,6 @@
-# Final-stack installation candidate v0.2
+> **2026-10-30 publication:** Start with [the beginner guide](NEWBIE_INSTALL.md) and [versioned downloads](../downloads/README.md). Older filenames/hashes below describe the retained foundation build; do not mix them with newer feature payloads.
+
+# Final-stack installation candidate v0.2.1
 
 **HIGHLY EXPERIMENTAL. USE AT YOUR OWN RISK. NO WARRANTY.** Read DISCLAIMER.md.
 
@@ -24,7 +26,7 @@ those foundations in their intended final configuration.
   exact JAR and Java startup are checked. A differing patch needs review.
 - Existing SSH access, stable power, parked vehicle, writable SD/USB, off-unit
   original backups and an independently accessible recovery method.
-- Use the **assembled v0.2 bundle**, not GitHub's source Download ZIP or the
+- Use the **assembled v0.2.1 bundle**, not GitHub's source Download ZIP or the
   receiver-only updater. No compiler/SDK is required on the unit.
 
 If uncertain, use scripts/collect_install_baseline.py on the host first, then
@@ -34,7 +36,7 @@ evidence; it does not override a failed fresh-install baseline check.
 
 ## Prepare and install
 
-Unzip the whole folder `SEAT-MU1409-final-stack-candidate-v0.2` to the SD root.
+Unzip the whole folder `SEAT-MU1409-final-stack-candidate-v0.2.1` to the SD root.
 Keep install.sh, payload/, KIT.sha256, TARGETS.txt and IMMUTABLES.txt together.
 Keep the supplied source/license materials with the package when sharing it.
 Unplug the phone. Do not use SWDL or an automatic-flashing menu.
@@ -42,7 +44,7 @@ Unplug the phone. Do not use SWDL or an automatic-flashing menu.
 In the unit's SSH terminal (adjust /fs/sda0 if the medium uses another path):
 
 ```sh
-/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2/install.sh --check
+/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2.1/install.sh --check
 ```
 
 Expect the J9 probe to pass and `FULL_PREFLIGHT=PASS persistent_writes=0`.
@@ -52,7 +54,7 @@ This proves preflight conditions, not working visible output.
 After a matching preflight and original backups/recovery review:
 
 ```sh
-/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2/install.sh --apply
+/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2.1/install.sh --apply
 ```
 
 The expected final line is `FULL_INSTALL=FINAL_STACK_FILES_VERIFIED` with
@@ -96,13 +98,13 @@ and behavior remain explicitly unaccepted until the operator checks them.
 Unplug the phone, retain power and SSH access. Preflight restoration:
 
 ```sh
-/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2/install.sh --restore-check
+/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2.1/install.sh --restore-check
 ```
 
 Then restore only if the original backups and current activation files verify:
 
 ```sh
-/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2/install.sh --restore
+/bin/ksh /fs/sda0/SEAT-MU1409-final-stack-candidate-v0.2.1/install.sh --restore
 ```
 
 The same restore script and payload are also retained persistently at:
@@ -129,3 +131,16 @@ This is host-only. It verifies pinned retained inputs and original firewall
 hashes, generates the final settings profile, fixes the fresh installation's
 recovery entry, and writes a local-only ZIP under build/. Firmware-derived
 menu/startup payloads and SDKs are not published in this repository.
+
+## v0.2.1 startup directory correction
+
+The consolidated installer now creates `altscreen-u2/wp2/` before changing
+activation files. The retained storage probe requires this directory even though
+the active settings service lives under `harman-r13/`. It does not enable the
+retired WP2 service. Missing this directory caused `mount_identity errno=2`,
+then `R13_BOOT=PREREQUISITE_TIMEOUT` and missing geometry/settings.
+baseline-B confirmed the manual directory repair allowed the broker to start;
+CarPlay and automatic restart acceptance are separate checks.
+Existing installations repaired this way do not need reinstallation.
+The v0.2 backup/recovery location remains unchanged. Retain the original kit
+used for an existing installation; do not mix recovery manifests.

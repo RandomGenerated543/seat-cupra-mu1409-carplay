@@ -12,4 +12,4 @@ docker run --rm --platform linux/amd64 \
  -v "$ROOT/src/native:/work/private/development/mu1409-wp2-r57/src/native:ro" \
  -v "$OUT:/diag" -v "$ROOT/src/native/altscreen111-gen2:/diag/source:ro" \
  -w /work "$IMAGE" bash /repo/scripts/build_receiver_inside.sh
-python3 "$ROOT/scripts/verify_receiver.py" "$OUT/payload/libmibr_carplay111.so"
+python3 "$ROOT/scripts/verify_receiver.py" "$OUT/payload/libmibr_carplay111.so" --profile menu-zoom

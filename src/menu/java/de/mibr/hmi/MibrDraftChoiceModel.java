@@ -83,6 +83,7 @@ public final class MibrDraftChoiceModel {
             if ("2".equals(value)) return "Center";
         }
         String key = MibrSettingsCatalog.KEYS[index];
+        if ("display.zoomFactor".equals(key)) return "0".equals(value) ? MibrI18n.pick("Standard (nicht senden)", "Default (omit)") : value + "%";
         if ("navigation.surface".equals(key)) {
             if ("base".equals(value)) return MibrI18n.pick("Standard", "Standard");
             if ("map".equals(value)) return MibrI18n.pick("Karte", "Map");

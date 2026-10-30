@@ -1002,5 +1002,12 @@
   "tools/split_navactiveignore.py": {
     "origin": "MU1409 v0.1.4 project source snapshot (Harman public-source adaptation)",
     "sha256": "e1208ceba6fd7d0785c5bdcf259ac874e7713857394679a0bc8472e77f915967"
+  },
+  "publication_2026_10_30": {
+    "scope": "current curated SEAT sources plus separately versioned adapter source archives",
+    "runtime_catalog": "downloads/catalog.json",
+    "main_display_source": "src/main-display-zoom/receiver-source-variants.zip",
+    "media_source": "src/media-info",
+    "fresh_install_foundation": "v0.2.1; not a recompile of all latest layers"
   }
 }

@@ -1,77 +1,40 @@
-# SEAT/CUPRA MU1409 CarPlay — experimental tester/source handoff
+# SEAT / CUPRA MU1409 Apple CarPlay and wireless adapters
 
-> **HIGHLY EXPERIMENTAL. USE AT YOUR OWN RISK. NO WARRANTY.**
-> The maintainer/authors/contributors exclude liability to the extent permitted
-> by applicable law. This may disrupt or disable infotainment/cockpit functions.
-> **Parked testing only; verified backups and independent recovery required.**
-> Read [the full disclaimer](DISCLAIMER.md) before continuing.
+> **HIGHLY EXPERIMENTAL — INSTALL AND USE AT YOUR OWN RISK.**
+> Provided AS IS, without warranty. The maintainers, authors and contributors accept no liability to the extent permitted by applicable law. A failed modification can disable infotainment or cockpit functions, damage an adapter, lose pairing/settings or require specialist recovery. No compatibility or successful recovery is guaranteed. Read [DISCLAIMER.md](DISCLAIMER.md). Test only while parked, with stable power and verified backups.
 
-This repository preserves the latest target-adapted project source used during
-the CUPRA Ateca MU1409 tests, plus its build dependencies, settings/control source,
-menu changes, tests and documentation. It builds on
-[harman-f/mhi2_altscreen_carplay](https://github.com/harman-f/mhi2_altscreen_carplay).
-It is an unofficial contribution, not a Harman/Apple/SEAT/CUPRA-supported product.
+Unofficial project for the SEAT/Cupra **MHI2_ER_SEG11_P4708 / P4708_1, MU1409** port and separately matched wireless adapters. This is not an Apple, SEAT, CUPRA, Volkswagen, Harman or adapter-vendor-supported product. A similar model name does not establish compatibility.
 
-## Start here
+## New here? Follow this order
 
-1. [Status and known limitations](docs/STATUS.md).
-2. [Exact-target prerequisites](docs/PREREQUISITES.md).
-3. [Build from source](docs/BUILD.md).
-4. [Consolidated final-stack installation candidate](docs/CONSOLIDATED_INSTALL.md) for a matching post-omonob baseline.
-5. [Existing-stack receiver update](docs/TESTING.md).
-6. [Full-stack recovery](docs/CONSOLIDATED_INSTALL.md#restore-this-fresh-installation) or [receiver-only recovery](docs/RECOVERY.md).
+1. [Choose your package and read the compatibility limits](docs/START_HERE.md).
+2. [Download ZIPs and verify their checksums](downloads/README.md). **GitHub Code → Download ZIP is source, not an SD installer.**
+3. For the car: [beginner installation, prerequisites and recovery](docs/NEWBIE_INSTALL.md).
+4. For a wireless adapter: [model/firmware selector and flashing instructions](adapters/README.md). First get cockpit maps working over a direct USB cable.
+5. For developers: [source map, dependencies and packaging](docs/DEVELOPMENT_AND_PACKAGING.md).
 
-**This is not a universal SD-card installer.** The consolidated candidate
-installs the final WP1 foundations and WP2/menu/fixes together after matching
-omonob removal. It uses locally supplied exact inputs pinned in
-deployment/full-install/inputs.json, not intermediate receiver upgrades.
-The generated full bundle contains firmware-derived inputs and stays local.
-GitHub's Download ZIP is source, not that assembled SD bundle. The combined
-installer still requires vehicle acceptance. The separate receiver-upgrade folder
-only updates an already-matching project stack. Do not overlay either onto a
-running omonob installation or bypass a rejected compatibility/hash check.
+## Included features
 
-## Preserved tested configuration
+| Feature | Where to read |
+|---|---|
+| SEAT port: wired cockpit maps, guarded MOST ownership, original H.264 forwarding, firewall and automatic startup | [Full-stack installation](docs/CONSOLIDATED_INSTALL.md), [source](src/native) |
+| English native car HOME menu, settings persistence, dropdowns and red scroll indicator | [Menu source](src/menu), [known limitations](docs/STATUS.md) |
+| Right steering-wheel roller zoom, measured for this target | [Wheel zoom](docs/SEAT_CUPRA_MU1409_WHEEL_ZOOM.md) |
+| **Cockpit zoom-factor menu: 70%–150%**, plus Default/omit; restart required | [Cockpit zoom factor](docs/ZOOM_FACTOR_MENU.md) |
+| **MHI2 centre-screen zoom**, separate optional 70% metadata candidate | [Centre-screen zoom](docs/MAIN_DISPLAY_ZOOM.md) |
+| Three cockpit views and Wide SafeArea adjustment to **628×220 at 191,56** | [SafeAreas](docs/SAFEAREAS.md) |
+| **VC Audio/Media song title, artist and album**, clearing on disconnect | [Media in the cockpit](docs/MEDIA_IN_VC.md), [source](src/media-info) |
+| Bounded video queue recovery without repeatedly handing the display back to stock | [Scaling and recovery](docs/SEAT_CUPRA_MU1409_SCALING_AND_RECOVERY.md) |
+| Four separate wireless-adapter packages, source and stock fallback | [Adapter selector](adapters/README.md) |
 
-- Target: CUPRA Ateca, MHI2_ER_SEG11_P4708_1 / MU1409, fitted Continental 790 family.
-- Wired authenticated CarPlay -> Type-111 H.264 -> TS remux -> one guarded MOST
-  writer, /dev/mlb/isoTX2, 64 x 188-byte blocks.
-- Outer advertisement 1010 x 376, physical metadata 200 x 74.
-- Numeric lowercase zoomFactor=70 on the auxiliary display only.
-- Bounded raw-Annex-B queue recovery keeps the consumer connected and resumes
-  from current SPS/PPS plus a fresh IDR after dropping only unsent backlog.
-- Working target wheel bridge uses measured keyboard 4 / encoder 40 correlated
-  rotation. Apple Maps/Google Maps visibly responded; Waze did not.
-- Wide SafeArea 708 x 244 @151,56; Full 482 x 244 @264,56;
-  Center 256 x 244 @377,56. Reduced-layout information placement is unresolved.
-- R13 project-owned English menu/control source with the later dropdown and
-  red-scrollbar source overlays. The red indicator's vehicle appearance/re-entry
-  still needs explicit confirmation.
+The owner reports all four adapter configurations working as of **30 October 2026**. This is an operator report, not independent acceptance of every iOS/app/hardware combination. Original package validation notes retain their build-time status. Centre-screen icon-row count, every setting, touch alignment, reduced-view placement and long-term reliability are not universally qualified. See [release notes](docs/RELEASE_2026-10-30.md).
 
-## Evidence boundaries
+[Open issues and known limitations](docs/OPEN_ISSUES.md) include Waze zoom, reduced-view ETA/directions, media scope and recovery. Adapter functional tests must be in the actual car; after a completed flash, forget the old phone pairing and pair again.
 
-The operator reported improved map sizing and working recovery. A logged
-overflow at 51.310 s was followed by keyframe request at 51.316 and re-priming at
-51.457, with consumer generation 3 unchanged. This is receiver-log timing,
-not a measured end-to-end display latency. Repeated cold starts/reconnect,
-long-run reliability and every fallback path were not fully qualified.
+## Source and firmware boundaries
 
-No OEM firmware/JXE/IFS files, recovered vendor Java, QNX SDK/sysroot,
-credentials or raw personal captures are included. Project-owned Harman R13
-source is included with publication permission confirmed by the repository owner.
-Locally rebuilt menu artifacts can include OEM-derived hooks and must remain
-local unless their separate redistribution rights are established.
+The repository includes the SEAT-specific C/Java/shell port, latest cockpit menu zoom/settings changes, media bridge source, installer/build tools, tests, source archives and documentation. [The release](https://github.com/RandomGenerated543/seat-cupra-mu1409-carplay/releases/tag/experimental-2026-10-30) provides complete versioned runtime ZIPs with their own guarded installers/uploaders and rollback inputs. Source and runtime downloads serve different purposes.
 
-## Upstream work
+No QNX SDK/sysroot, full car/cockpit firmware extraction, MFi certificates/private keys, live credentials, personal captures or tester backups are published. Target-bound runtime bundles include compiled hooks derived from the supplied target inputs and vendor adapter binaries; their original rights apply. The project license does not relicense third-party binaries. See [provenance](THIRD_PARTY_NOTICES.md).
 
-Related focused contributions:
-[menu/dropdown #68](https://github.com/harman-f/mhi2_altscreen_carplay/pull/68),
-[scaling/recovery #69](https://github.com/harman-f/mhi2_altscreen_carplay/pull/69),
-[scrollbar #70](https://github.com/harman-f/mhi2_altscreen_carplay/pull/70),
-[view calibration #71](https://github.com/harman-f/mhi2_altscreen_carplay/pull/71),
-[wheel zoom #72](https://github.com/harman-f/mhi2_altscreen_carplay/pull/72).
-Those newer public integrations are separate from this older exact tested
-receiver snapshot; do not mix their ABI/transport sources piecemeal.
-
-Source/component origins and hashes are in SOURCE_PROVENANCE.json.
-See [licenses and attribution](THIRD_PARTY_NOTICES.md).
+Upstream foundations: [harman-f/mhi2_altscreen_carplay](https://github.com/harman-f/mhi2_altscreen_carplay), [OMKE wireless adapter work](https://github.com/OMKE/wireless-carplay-virtual-cockpit), [kamgurgul HW301 work](https://github.com/kamgurgul/mib2q-carplay), and the [MST2 media reference](https://github.com/xPaiiN/mst2-carplay-vc). The SEAT media implementation uses target-specific MHI2 classes; do not install an MST2 package on MHI2.

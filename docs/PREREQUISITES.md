@@ -1,3 +1,5 @@
+> **2026-10-30 publication:** Start with [the beginner guide](NEWBIE_INSTALL.md) and [versioned downloads](../downloads/README.md). Older filenames/hashes below describe the retained foundation build; do not mix them with newer feature payloads.
+
 # Prerequisites
 
 **Highly experimental; [read the disclaimer](../DISCLAIMER.md).**

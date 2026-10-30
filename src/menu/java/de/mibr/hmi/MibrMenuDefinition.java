@@ -31,7 +31,7 @@ public final class MibrMenuDefinition {
  public static String[] groupNames(){return MibrI18n.german()?GROUP_NAMES_DE:GROUP_NAMES_EN;}
  public static final String[][] GROUP_KEYS={
   {},
-  {"carplay.enabled", "maxFPS", "sourceVersion"},
+  {"carplay.enabled", "maxFPS", "sourceVersion", "display.zoomFactor"},
   {}
  };
  /** Every HMI-visible key: main list first, then submenus in order. */
@@ -44,7 +44,8 @@ public final class MibrMenuDefinition {
   "navigation.maneuver",
   "carplay.enabled",
   "maxFPS",
-  "sourceVersion"
+  "sourceVersion",
+  "display.zoomFactor"
  };
  /** Exact native MIBR/3 SNAPSHOT scope=ui row order; includes HMI-hidden keys. */
  public static final String[] NATIVE_UI_KEYS={
@@ -58,6 +59,7 @@ public final class MibrMenuDefinition {
   "navigation.url",
   "preset.id",
   "maxFPS",
-  "sourceVersion"
+  "sourceVersion",
+  "display.zoomFactor"
  };
 }

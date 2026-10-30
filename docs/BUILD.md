@@ -1,3 +1,5 @@
+> **2026-10-30 publication:** Start with [the beginner guide](NEWBIE_INSTALL.md) and [versioned downloads](../downloads/README.md). Older filenames/hashes below describe the retained foundation build; do not mix them with newer feature payloads.
+
 # Build from source
 
 **Highly experimental; [use at your own risk](../DISCLAIMER.md).**
@@ -85,3 +87,5 @@ No universal fresh installation is claimed. Building source does not create a
 generic supported SD installer. The separate receiver upgrade works only on the exact
 already-matching project baseline. For another unit, perform exact firmware,
 loader, startup, media-owner, Java and recovery qualification first.
+
+Receiver identity check: the legacy foundation payload is verified with the default profile; the current cockpit-menu source uses `python3 scripts/verify_receiver.py FILE --profile menu-zoom`. The Docker source builder selects that profile. This does not permit applying the new receiver alone to the old broker/menu.

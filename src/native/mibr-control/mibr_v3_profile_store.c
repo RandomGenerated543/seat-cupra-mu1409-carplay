@@ -76,7 +76,15 @@ static int profile_candidate(const char *old,size_t n,
         used+=strlen(selected_value);candidate[used++]='\n';
         count++;p=(size_t)(end-old)+1;
     }
-    if(count!=45||!found)return -1;
+    /* Old exact 45-row profiles are accepted. Append only this new key
+     * on its first guarded mutation; do not rewrite unrelated preferences. */
+    if(count!=45 && !(count==46 && seen[ALTSET_DISPLAY_ZOOMFACTOR]))return -1;
+    if(!found && selected==ALTSET_DISPLAY_ZOOMFACTOR && !seen[selected]){
+        int extra=snprintf(candidate+used,PROFILE_CAP-used,"display.zoomFactor=%s\n",value);
+        if(extra<0 || (size_t)extra>=PROFILE_CAP-used)return -1;
+        used+=(size_t)extra;found=1;
+    }
+    if(!found)return -1;
     candidate[used]=0;*next_size=used;return 0;
 }
 int mibr_v3_profile_parity(const char *path,const struct alt111_settings *observed){

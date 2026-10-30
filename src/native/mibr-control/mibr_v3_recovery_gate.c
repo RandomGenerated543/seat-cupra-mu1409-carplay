@@ -42,13 +42,14 @@ static int valid_file(const char *path){
         if(id<0||seen[id]++||alt111_setting_validate((unsigned)id,equal+1))return -1;
         count++;offset=(size_t)(end-text)+1;
     }
-    return count==45?0:-1;
+    return (count==45 && !seen[ALTSET_DISPLAY_ZOOMFACTOR]) ||
+        (count==46 && seen[ALTSET_DISPLAY_ZOOMFACTOR]) ? 0 : -1;
 }
 int mibr_v3_recovery_check(const char *profile_path){
     char parent[PATH_CAP],backup[PATH_CAP],base[PATH_CAP];
     const char *slash;DIR *directory;struct dirent *entry;size_t size;
     if(!profile_path||profile_path[0]!='/'||
-       strlen(profile_path)>=PATH_CAP-32u||ALTSET_COUNT!=48u)return -1;
+       strlen(profile_path)>=PATH_CAP-32u||ALTSET_COUNT!=49u)return -1;
     slash=strrchr(profile_path,'/');if(!slash||!slash[1])return -1;
     size=(size_t)(slash-profile_path);
     if(size>=sizeof(parent)||strlen(slash+1)>=sizeof(base))return -1;

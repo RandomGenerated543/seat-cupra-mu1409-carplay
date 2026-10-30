@@ -48,4 +48,5 @@ static const struct alt111_setting_descriptor registry[] = {
     {"navigation.maneuver", "mibr-carplay111-nav.conf", "maneuverLayout", "enum", "none|left|right|top", "none", "none", "none", "presentation", "normal", 0, 0, 10, 0},
     {"presentation.suggested_urls", "mibr-carplay111-ui-urls.conf", "urls", "urls", "", "maps:/car/instrumentcluster/map", "maps:/car/instrumentcluster|maps:/car/instrumentcluster/map|maps:/car/instrumentcluster/instructioncard", "maps:/car/instrumentcluster/map", "reconnect", "developer", 0, 0, 11, 0},
     {"legacy.autodirect", "mibr-carplay-autodirect", "", "integer", "", "0", "0", "0", "session", "developer", 0, 0, 12, 1},
+    {"display.zoomFactor", "mibr-carplay111-zoomfactor", "", "enum", "0|70|80|90|100|110|120|130|140|150", "70", "70", "70", "reconnect", "advanced", 0, 0, 13, 0},
 };

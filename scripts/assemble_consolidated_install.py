@@ -123,6 +123,6 @@ if __name__ == "__main__":
     a.add_argument("--inputs", type=Path, required=True); a.add_argument("--baseline", type=Path, required=True)
     a.add_argument("--out", type=Path)
     args = a.parse_args(); root = Path(__file__).resolve().parents[1]
-    out = (args.out or root / "build/SEAT-MU1409-final-stack-candidate-v0.2").resolve()
+    out = (args.out or root / "build/SEAT-MU1409-final-stack-candidate-v0.2.1").resolve()
     if not out.is_relative_to(root / "build"): a.error("Generated kit must stay under build/")
     assemble(args.inputs, args.baseline, out, root)

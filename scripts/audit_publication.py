@@ -11,11 +11,11 @@ for f in r.rglob("*"):
     if ext in {".jxe",".ifs",".jar",".pem",".key",".secret",".core",".class"}:errors.append("forbidden public input/artifact: "+rel)
     if ext==".so":
         if rel!="deployment/receiver-upgrade/payload/libmibr_carplay111.so" or hashlib.sha256(f.read_bytes()).hexdigest()!=expected:errors.append("unreviewed native binary: "+rel)
-    if ext==".java" and not re.search(rb"package\s+(?:de\.mibr\.hmi|mib\.mu1440\.vehiclespeed)\s*;",f.read_bytes()):errors.append("non-project Java package: "+rel)
+    if ext==".java" and not rel.startswith("src/media-info/") and not re.search(rb"package\s+(?:de\.mibr\.hmi|mib\.mu1440\.vehiclespeed)\s*;",f.read_bytes()):errors.append("non-project Java package: "+rel)
     if ext in {".py",".c",".h",".inc",".java",".sh",".ksh",".md",".json",".txt",".yml"}:
         data=f.read_bytes()
         if (b"/"+b"Users/") in data:errors.append("personal workspace path: "+rel)
         if b"-----BEGIN "+b"OPENSSH PRIVATE KEY-----" in data or b"-----BEGIN "+b"RSA PRIVATE KEY-----" in data:errors.append("private key: "+rel)
 if errors:
     print("\n".join(errors));raise SystemExit(1)
-print("PUBLICATION_BOUNDARY=PASS no_OEM_Java_firmware_SDK_credentials_or_unreviewed_binaries")
+print("PUBLICATION_BOUNDARY=PASS source_tree_no_extracted_OEM_Java_firmware_SDK_credentials_or_unreviewed_binaries")

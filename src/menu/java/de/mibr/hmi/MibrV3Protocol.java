@@ -21,7 +21,7 @@ public final class MibrV3Protocol {
     }
     public static final class Snapshot {
         public final String revision,stored,connected,session,pending;
-        public final String[] keys=new String[11],values=new String[11],sources=new String[11],apply=new String[11];
+        public final String[] keys=new String[MibrMenuDefinition.NATIVE_UI_KEYS.length],values=new String[MibrMenuDefinition.NATIVE_UI_KEYS.length],sources=new String[MibrMenuDefinition.NATIVE_UI_KEYS.length],apply=new String[MibrMenuDefinition.NATIVE_UI_KEYS.length];
         private Snapshot(Frame f){
             revision=required(f,"revision");stored=required(f,"stored");
             connected=required(f,"connected");session=required(f,"session");pending=required(f,"pending");
@@ -162,7 +162,7 @@ public final class MibrV3Protocol {
     }
     public static boolean hello(Frame f){
         return f!=null&&f.ok()&&"MIBR/3".equals(f.get("version"))&&
-            "2".equals(f.get("schema"))&&"48".equals(f.get("registry_keys"));
+            "2".equals(f.get("schema"))&&"49".equals(f.get("registry_keys"));
     }
     public static boolean capabilities(Frame f){
         return f!=null&&f.ok()&&"1".equals(f.get("snapshot"))&&
@@ -175,7 +175,7 @@ public final class MibrV3Protocol {
             "NATIVE_PROFILE_GUARDED".equals(f.get("phase"));
     }
     public static Snapshot snapshot(Frame f){
-        if(f==null||!f.ok()||!"11".equals(f.get("row_count"))||
+        if(f==null||!f.ok()||!String.valueOf(MibrMenuDefinition.NATIVE_UI_KEYS.length).equals(f.get("row_count"))||
            !revision(f.get("revision"))||!"0".equals(f.get("runtime_correlated"))||
            !"NONE".equals(f.get("session")))throw new IllegalArgumentException("SNAPSHOT_HEADER");
         Snapshot snap=new Snapshot(f);
@@ -184,7 +184,7 @@ public final class MibrV3Protocol {
         // Native scope=ui keeps its exact 11-row order (Issue #103), even where
         // the r8 HMI hides a row (navigation.url): parse all, draw only visible.
         String[] section=MibrMenuDefinition.NATIVE_UI_KEYS;
-        if(section.length!=11)throw new IllegalStateException("NATIVE_UI_KEY_DRIFT");
+        if(section.length!=12)throw new IllegalStateException("NATIVE_UI_KEY_DRIFT");
         {
             int j=0;
             for(int i=0;i<section.length;i++,j++){

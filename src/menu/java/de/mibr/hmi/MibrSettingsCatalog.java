@@ -50,7 +50,8 @@ public final class MibrSettingsCatalog {
   "display.heightPhysical",
   "display.uuid",
   "presentation.suggested_urls",
-  "legacy.autodirect"
+  "legacy.autodirect",
+  "display.zoomFactor"
  };
  public static final String[] LABELS_DE={
   "CarPlay im Cockpit",
@@ -100,7 +101,8 @@ public final class MibrSettingsCatalog {
   "Physische Hoehe",
   "Display-UUID",
   "Angebotene URLs",
-  "Legacy Autodirect"
+  "Legacy Autodirect",
+  "Cockpit-Zoomfaktor (Neustart)"
  };
  public static final String[] LABELS_EN={
   "CarPlay in cockpit",
@@ -150,7 +152,8 @@ public final class MibrSettingsCatalog {
   "Physical height",
   "Display UUID",
   "Suggested URLs",
-  "Legacy autodirect"
+  "Legacy autodirect",
+  "Cockpit zoom factor (restart)"
  };
  public static String label(int index){return MibrI18n.german()?LABELS_DE[index]:LABELS_EN[index];}
  public static final String[] GROUPS={
@@ -201,7 +204,8 @@ public final class MibrSettingsCatalog {
   "developer",
   "developer",
   "developer",
-  "developer"
+  "developer",
+  "advanced"
  };
  public static final String[] APPLY={
   "session",
@@ -251,7 +255,8 @@ public final class MibrSettingsCatalog {
   "reconnect",
   "reconnect",
   "reconnect",
-  "session"
+  "session",
+  "reconnect"
  };
  public static final String[] KINDS={
   "integer",
@@ -301,7 +306,8 @@ public final class MibrSettingsCatalog {
   "integer",
   "uuid",
   "urls",
-  "integer"
+  "integer",
+  "enum"
  };
  public static final String[] CHOICES={
   "",
@@ -351,10 +357,11 @@ public final class MibrSettingsCatalog {
   "",
   "",
   "",
-  ""
+  "",
+  "0|70|80|90|100|110|120|130|140|150"
  };
  public static final boolean[] READ_ONLY={
-  false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, true, false, true
+  false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, true, false, true, false
  };
  public static final String[] UI_KINDS={
   "TOGGLE",
@@ -404,7 +411,8 @@ public final class MibrSettingsCatalog {
   "BOUNDED_NUMBER",
   "STATUS",
   "CHOICE_PENDING_CANONICAL_VALIDATOR",
-  "STATUS"
+  "STATUS",
+  "CHOICE"
  };
  public static final String[] UI_SECTIONS={
   "advanced",
@@ -454,6 +462,7 @@ public final class MibrSettingsCatalog {
   "hidden",
   "hidden",
   "hidden",
-  "hidden"
+  "hidden",
+  "advanced"
  };
 }

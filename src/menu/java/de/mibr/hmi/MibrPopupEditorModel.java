@@ -50,7 +50,7 @@ public final class MibrPopupEditorModel {
         String key=MibrSettingsCatalog.KEYS[index];
         // r14: Ansicht (viewarea.selected) is a live TEMP index and saved like the navigation values.
         // r23: carplay.enabled ("CarPlay im Cockpit") is the runtime pause shared with the KEY40 long press.
-        return "viewarea.selected".equals(key) || "carplay.enabled".equals(key) ||
+        return "display.zoomFactor".equals(key) || "viewarea.selected".equals(key) || "carplay.enabled".equals(key) ||
                key.startsWith("navigation.") && !"navigation.url".equals(key);
     }
     /**

@@ -1,0 +1,13 @@
+{
+  "scope": "host simulations only; no vehicle execution",
+  "results": [
+    "baseline: check/apply/repeat/restore/reapply PASS",
+    "legacy-baseline: check/apply/repeat/restore/reapply PASS",
+    "second_commit_failure: both original files restored and mount returned readonly PASS",
+    "connected_phone: refused before writes PASS",
+    "unknown_receiver: refused PASS",
+    "symlink_target: refused PASS",
+    "damaged_backup: refused PASS"
+  ],
+  "pass": true
+}

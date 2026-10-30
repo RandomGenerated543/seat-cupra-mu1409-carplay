@@ -1,0 +1,50 @@
+{
+  "status": "experimental_candidate_not_vehicle_qualified",
+  "phone_acceptance": "UNTESTED",
+  "three_icon_rows": "UNTESTED",
+  "touch_alignment": "UNTESTED",
+  "geometry": "800x480 unchanged",
+  "main_zoom_percent": 70,
+  "transcoding": false,
+  "cockpit_control_layer_changes": false,
+  "original_receiver_c_diff_is_only_helper_include_and_array_copy": true,
+  "baseline_rebuilds": {
+    "menu": "d14ce7650e2e9eded14883b3af60c3209af772fefb17e61b58eab3a4a2bfedd8",
+    "fixed": "6165f72974b4ebea8f4a3e27a0354f20df98e29350b810b4e0ac4d5efcf7fce5"
+  },
+  "CF_mock": "passed isolation, extra displays, geometry, input metadata, allocation fallback, wrong target, empty array",
+  "abi": [
+    {
+      "baseline": "baseline",
+      "candidate": "candidate",
+      "undefined_symbols_unchanged": true,
+      "dependencies": [
+        "libsocket.so.3"
+      ],
+      "elf32_arm": true
+    },
+    {
+      "baseline": "legacy-baseline",
+      "candidate": "legacy-candidate",
+      "undefined_symbols_unchanged": true,
+      "dependencies": [
+        "libsocket.so.3"
+      ],
+      "elf32_arm": true
+    }
+  ],
+  "installer_tests": {
+    "scope": "host simulations only; no vehicle execution",
+    "results": [
+      "baseline: check/apply/repeat/restore/reapply PASS",
+      "legacy-baseline: check/apply/repeat/restore/reapply PASS",
+      "second_commit_failure: both original files restored and mount returned readonly PASS",
+      "connected_phone: refused before writes PASS",
+      "unknown_receiver: refused PASS",
+      "symlink_target: refused PASS",
+      "damaged_backup: refused PASS"
+    ],
+    "pass": true
+  },
+  "qnx_sdk_ksh_syntax": "PASS"
+}

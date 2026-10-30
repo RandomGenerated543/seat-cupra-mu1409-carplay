@@ -1,0 +1,50 @@
+{
+  "status": "HOST_BUILT_VEHICLE_UNTESTED",
+  "reference_commit": "f1ac169d1ce40b291d9a2ab6a0d97fe53474754f",
+  "target": "MHI2_ER_SEG11_P4708_1 MU1409 EU",
+  "scope": "AudioSD song title/artist/album only",
+  "class_format": 46,
+  "jar_sha256": "058d49bb6e66aff9ddbaa10a930e089720026a614d03b8d08704fa15a43f7c8c",
+  "stock_jar_sha256": "f55a83a10d76e477a1f5db5a9fc15db418454ad2fd8f9dfbe28cf3556c2087b1",
+  "patched": [
+    {
+      "class": "de/vw/mib/asl/internal/carplay/target/HsmTarget.class",
+      "before_sha256": "d3abbf1a29f7d92c63ec451b17d82bfbaa37d407e8f4b7d3b8c0e55d6f2acbc0",
+      "after_sha256": "7d8131398040b990663a2ce0934d7b07a2024b67d6a41bc0fe40bc87cb10e224",
+      "changed_methods": [
+        "deInitializeDSI",
+        "initializeDSI"
+      ],
+      "untouched_methods_byte_identical": 25
+    },
+    {
+      "class": "de/vw/mib/asl/internal/carplay/common/CarPlayGlobalProperies.class",
+      "before_sha256": "6849c99f398c43f46af457a8476e4eb3e83a5cec0ca3a4a9e2e2be8c1cdfc35e",
+      "after_sha256": "c1b90e4b529205b591867dd483699cbdcba3a037a401ead23ef00dc64d192b0f",
+      "changed_methods": [
+        "setConnectionState"
+      ],
+      "untouched_methods_byte_identical": 70
+    },
+    {
+      "class": "de/vw/mib/bap/mqbab2/audiosd/functions/CurrentStationInfo.class",
+      "before_sha256": "7a1207bd6744886046302f0ad3cc508bf65c8bb69a2834e9b72d90910fe35405",
+      "after_sha256": "54ec10a8b527d3b33b8807920535e110a4fd94f024c2634b164e91e97ce0fde5",
+      "changed_methods": [
+        "init",
+        "setStationInfoForMirrorLink",
+        "uninitialize"
+      ],
+      "untouched_methods_byte_identical": 53
+    }
+  ],
+  "source": "Target-specific original-bytecode hooks; reference architectural comparison only",
+  "excluded": [
+    "artwork",
+    "playback timer",
+    "shuffle",
+    "telephony",
+    "navigation import"
+  ],
+  "startup": "Separate priority jar; existing menu and native receiver unchanged"
+}

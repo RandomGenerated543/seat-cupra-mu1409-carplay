@@ -1,0 +1,15 @@
+classes/
+test-classes/
+host/classes/
+host/*.class
+installer-tests/
+__pycache__/
+*.log
+package/payload/
+package/hashes.sh
+package/BUILD.json
+package/INSTALLER-TESTS.json
+package/LICENSE
+package/DISCLAIMER.md
+MU1409-media-info-v0.1/
+*.zip

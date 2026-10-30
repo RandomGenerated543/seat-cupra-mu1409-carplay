@@ -1,0 +1,37 @@
+{
+  "scope": "Host fixtures; QNX native J9 and visible result untested",
+  "cases": [
+    {
+      "case": "readonly_check",
+      "passed": true
+    },
+    {
+      "case": "tamper_rejected",
+      "passed": true
+    },
+    {
+      "case": "unknown_startup",
+      "passed": true
+    },
+    {
+      "case": "j9_rejected",
+      "passed": true
+    },
+    {
+      "case": "apply_idempotent_restore",
+      "passed": true
+    },
+    {
+      "case": "partial_jar",
+      "passed": true
+    },
+    {
+      "case": "partial_startup",
+      "passed": true
+    },
+    {
+      "case": "readonly_mount_failure",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "publication_date": "2026-11-22",
+  "branch": "omonob-mu1447",
+  "root": "omonob-mu1447",
+  "upstream": [
+    "https://github.com/omonob/VW-MHI2-Carplay-Maps",
+    "https://github.com/omonob/VW-MHI2-Wireless-Carplay-Maps"
+  ],
+  "base": "public wired v2.1.0-rc.7 MU1447/790 plus supplied manual wireless runtime",
+  "complete_original_upstream_source": "External dependency; these are port/patch sources, not reconstructed OEM/receiver source",
+  "package_identity": "Original delivered archives kept byte-exact",
+  "browsable_source_change": "Local developer input paths replaced with /path/to placeholders; originals retained inside ZIPs",
+  "excluded": [
+    "full firmware images",
+    "QNX SDK/sysroot",
+    "MFi private material",
+    "SSH keys",
+    "phone pairing stores",
+    "raw personal diagnostic captures",
+    "car backups",
+    "previous MU1409 runtime deployment"
+  ],
+  "packages": [
+    {
+      "name": "MU1447-Wired-Display-v0.1.1",
+      "file": "MU1447-Wired-Display-v0.1.1.zip",
+      "sha256": "a6249e1ffb5d3d3af48b1fe83b9848561e2f44a4895c740fcc56e5900474be61",
+      "bytes": 69481,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    },
+    {
+      "name": "MU1447-Wired-Layout-v0.2",
+      "file": "MU1447-Wired-Layout-v0.2.zip",
+      "sha256": "b0f3682402d6ac10a283cffcfc79f5d6ba0cf3be13980869d6d716bd00c1d3b5",
+      "bytes": 110584,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    },
+    {
+      "name": "MU1447-Center-Down-v0.1",
+      "file": "MU1447-Center-Down-v0.1.zip",
+      "sha256": "18bc0b587ad33a8e8fc5f16e608fe0d7a852d3741e227f69563369bad48e8dd1",
+      "bytes": 53085,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    },
+    {
+      "name": "MU1447-Native-Wireless-v1.0-rc1.3",
+      "file": "MU1447-Native-Wireless-v1.0-rc1.3.zip",
+      "sha256": "563fb6c79d53197fba79ba14dde278a00a33b2f48963e2c435d2bdfce822d535",
+      "bytes": 1053961,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    },
+    {
+      "name": "MU1447-Wireless-Network-v0.1",
+      "file": "MU1447-Wireless-Network-v0.1.zip",
+      "sha256": "a8c1977aaf9026d1672f6ddfade13e725880fd62cfb59ab68efe381ef1814f20",
+      "bytes": 36742,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    },
+    {
+      "name": "MU1447-Wireless-Layout-v0.1",
+      "file": "MU1447-Wireless-Layout-v0.1.zip",
+      "sha256": "f58e92114678c20b5e8ba61efae2f7acb7eb02e97ccff9f4b3025c5368cf4a26",
+      "bytes": 1043713,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    },
+    {
+      "name": "MU1447-Wireless-Runtime-v0.1",
+      "file": "MU1447-Wireless-Runtime-v0.1.zip",
+      "sha256": "8c35db763143f63c4eaa6ffa2cab3a603b43c7b0c7ff722658cbe70e4c99c815",
+      "bytes": 102668,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    },
+    {
+      "name": "MU1447-Wireless-Startup-v0.1",
+      "file": "MU1447-Wireless-Startup-v0.1.zip",
+      "sha256": "18ed1c4511619f0bda59e0ea66f21b3cff3c82795ecc95f9c4a54c93417e629e",
+      "bytes": 77463,
+      "identity": "byte-exact delivered SD archive; no rebuilding or repacking"
+    }
+  ]
+}

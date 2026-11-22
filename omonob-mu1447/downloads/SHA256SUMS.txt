@@ -1,0 +1,8 @@
+a6249e1ffb5d3d3af48b1fe83b9848561e2f44a4895c740fcc56e5900474be61  MU1447-Wired-Display-v0.1.1.zip
+b0f3682402d6ac10a283cffcfc79f5d6ba0cf3be13980869d6d716bd00c1d3b5  MU1447-Wired-Layout-v0.2.zip
+18bc0b587ad33a8e8fc5f16e608fe0d7a852d3741e227f69563369bad48e8dd1  MU1447-Center-Down-v0.1.zip
+563fb6c79d53197fba79ba14dde278a00a33b2f48963e2c435d2bdfce822d535  MU1447-Native-Wireless-v1.0-rc1.3.zip
+a8c1977aaf9026d1672f6ddfade13e725880fd62cfb59ab68efe381ef1814f20  MU1447-Wireless-Network-v0.1.zip
+f58e92114678c20b5e8ba61efae2f7acb7eb02e97ccff9f4b3025c5368cf4a26  MU1447-Wireless-Layout-v0.1.zip
+8c35db763143f63c4eaa6ffa2cab3a603b43c7b0c7ff722658cbe70e4c99c815  MU1447-Wireless-Runtime-v0.1.zip
+18ed1c4511619f0bda59e0ea66f21b3cff3c82795ecc95f9c4a54c93417e629e  MU1447-Wireless-Startup-v0.1.zip

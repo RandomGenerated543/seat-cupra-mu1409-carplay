@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "scope": "host transaction; native hash checker/mount calls stubbed",
+  "cases": [
+    "CenterY56: check readonly, correct variant installed, idempotence, sealed restore, second-write failure rollback, QoS retained",
+    "CenterY76: check readonly, correct variant installed, idempotence, sealed restore, second-write failure rollback, QoS retained"
+  ],
+  "arm_helper_cases": 32,
+  "car_acceptance": "UNTESTED"
+}

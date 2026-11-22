@@ -1,0 +1,13 @@
+{
+  "name": "MU1447-Wireless-Network-v0.1",
+  "date": "2026-11-19",
+  "hardware_acceptance": "UNTESTED",
+  "native_firewall_parser": "MANDATORY_ON_UNIT_CHECK",
+  "persistent_targets": [
+    "/mnt/ota/wcp_pf.sh",
+    "/mnt/ota/wcp_pfwatch.sh"
+  ],
+  "host_tests": "PASS",
+  "native_or_java_binary_targets": 0,
+  "claim": "Restores missing factory-queue classification; disconnect prevention is not established."
+}

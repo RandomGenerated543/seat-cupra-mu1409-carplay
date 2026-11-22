@@ -1,0 +1,9 @@
+{
+  "name": "MU1447-Wireless-Runtime-v0.1",
+  "native_target": "QNX 6.5 ARMv7 softfp",
+  "changed_existing_files": 5,
+  "new_file": "/mnt/ota/mu1447-runtime-guard",
+  "donor_CP_sha256": "d158a3c98aa26159b51c25eb76eb16e3c666efd62fdb6c7d76b90ce771894453",
+  "source_working_directory": "/path/to/SEAT-CUPRA-MU1409-AltScreen/work/mu1447-wireless-integration/runtime-fix-v01",
+  "build_notes": "build.py assembles Java delta against the retained MU1447/OEM inputs; QNX compiler command in source/BUILDING.txt"
+}

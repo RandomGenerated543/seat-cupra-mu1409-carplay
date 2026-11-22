@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-21",
+  "local_results": {
+    "runtime-tests.log": "OWNERSHIP=PASS mixed_camera_order independent_take stale_canvas deferred_claim_once explicit_UI session_drop_during_camera wired_fallback\nSESSION=PASS active_without_main_video real_end_with_stale_video unknown_fallback\nSTARTUP=PASS delayed_locator observer_retry restartable_latch cleanup\nTOUCH=PASS blocked_sender_does_not_block_input bounded_coalescing camera_gesture_handoff no_partial_OEM_gesture disable_fallback\nREGISTRATION=PASS one_target retry_partial_observer retry_partial_listener cleanup_failure_retains_identity no_duplicate_unregistration\n",
+    "native-tests.log": "NATIVE=PASS host_PID_validation atomic_status_format exclusive_process_lock receiver_callback_fingerprints_variants=3\nQNX_PROCFS=REQUIRES_ON_UNIT_READONLY_INSPECT\n",
+    "link-check-host.log": "MU1447_RUNTIME_JAVA=PASS classes=10 activators_invoked=0\n",
+    "installer-tests.log": "INSTALLER=PASS variants=3 readonly_checks sealed_restore late_failure_rollback interrupted_restore existing_addons_preserved\nbase: readonly check, missing observation refusal, low RAM refusal, apply/reapply, restore/reapply, later-edit refusal, last-write rollback, interrupted mixed-state restore, unknown input refusal; receiver/layout/network/wired/media/pairing unchanged\n56: readonly check, missing observation refusal, low RAM refusal, apply/reapply, restore/reapply, later-edit refusal, last-write rollback, interrupted mixed-state restore, unknown input refusal; receiver/layout/network/wired/media/pairing unchanged\n76: readonly check, missing observation refusal, low RAM refusal, apply/reapply, restore/reapply, later-edit refusal, last-write rollback, interrupted mixed-state restore, unknown input refusal; receiver/layout/network/wired/media/pairing unchanged\n",
+    "abi-tests.log": "ABI=PASS target_class_version=46 no_new_Java5_bytecode OEM_touch_methods_preserved unrelated_donor_entries_preserved classes=13\n"
+  },
+  "hardware_acceptance": "NOT_PERFORMED",
+  "preflight_on_unit": "Required before any persistent write",
+  "network_scope": "unchanged",
+  "native_guard_sha256": "16884b33939453677d973a47f56139e78f650ecefd4c61e1905ae7f86ad73581",
+  "baseline": "MU1447 wireless rc1.3; recognized base/56/76 receiver variants; existing Wi-Fi and layout add-ons preserved"
+}

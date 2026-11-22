@@ -1,0 +1,25 @@
+Build from the retained project work/mu1447-wireless-integration/runtime-fix-v01.
+Requires: JDK 21, ASM 9.7/tree, exact MU1447 lsd.jar, original omonob CP donor,
+existing MU1447 payload (all paths checked into build.py), Python 3, Docker,
+and QNX 6.5 ARMv7 cross compiler image mhi2-qnx65-armv7-public:4.9.
+Firmware and compiler SDK are external dependencies and are not redistributed.
+
+python3 build.py
+
+docker run --rm --platform linux/amd64 -v "$PWD:/src" -w /src \
+ mhi2-qnx65-armv7-public:4.9 arm-unknown-nto-qnx6.5.0eabi-gcc \
+ -march=armv7-a -marm -mfloat-abi=softfp -Os -Wall -Wextra \
+ -include source/native/fingerprints.h source/native/runtime_guard.c \
+ -o build/mu1447-runtime-guard
+
+python3 test_java.py
+python3 test_native.py
+python3 package.py
+python3 test_installer.py
+python3 package.py
+
+The package generator expects the owner's retained project tree. Paths must be
+adapted for a different checkout. This is a delta build; it is not a standalone
+replacement for the external firmware, receiver or original Java donor.
+Source shell files: build/wcp_autostart.sh and build/wcp_ctl.sh in the retained
+work tree; exact final copies are also included as package payload.

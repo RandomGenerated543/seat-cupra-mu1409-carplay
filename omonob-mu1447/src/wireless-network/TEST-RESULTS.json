@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "scope": "host fixtures; native PF syntax is a mandatory on-unit gate, not host-validated",
+  "cases": [
+    "all four exact MU1447 OEM policies preserve every original line/NAT/SSH rule and add only queue classification",
+    "missing factory queue refuses policy generation",
+    "installer check and rejected native PF syntax do not change persistent files",
+    "install, sealed backup, idempotence and byte-exact restore"
+  ]
+}

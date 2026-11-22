@@ -1,0 +1,21 @@
+Startup wake correction build (Java archive only)
+
+This is a delta build in the retained project's
+work/mu1447-wireless-integration/runtime-fix-v011 directory.
+External dependencies are the original omonob CP donor, exact MU1447 lsd.jar,
+existing Runtime v0.1 files, JDK 21, ASM 9.7/tree, and Python 3. Paths in the build
+scripts identify the retained local inputs and must be adapted for other checkouts.
+The original firmware and SDK dependencies are not redistributed.
+
+python3 build.py
+python3 test_java.py
+python3 package_startup.py
+python3 test_startup_installer.py
+python3 package_startup.py
+
+Only build/CP-fixed.jar is installed by this correction. The build also emits
+unchanged Touch/bootstrap outputs to verify linkage and regression behavior;
+those outputs are not installed. The existing native runtime guard, receiver,
+player, transport and all network scripts remain byte-exact.
+The native source retained alongside the Java investigation is not rebuilt or
+installed by this one-file correction.

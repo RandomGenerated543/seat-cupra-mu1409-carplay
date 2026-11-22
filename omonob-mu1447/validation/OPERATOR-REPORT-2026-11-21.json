@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-21",
+  "report_type": "operator report in this chat, not independent testing",
+  "target": {
+    "train": "MHI2_ER_SEG11_P4709",
+    "mu": "1447",
+    "cluster_family": "790"
+  },
+  "installed": "Operator stated all current corrections were installed; exact combined live-file hash receipt not captured",
+  "observations": [
+    "Runtime v0.1 preflight passed on unit: receiver fingerprint read-only check and 10-class J9 metadata check",
+    "Two whole-session disconnects were recorded during the first minute; receiver reported ECONNRESET and kTimeoutErr/kConnectionErr",
+    "The receiver PID matched its original startup PID after reconnection",
+    "Capture showed hotspot channel changing 11 to 9 and the selected OEM firewall source changing to the Wi-Fi uplink variant",
+    "Both network interfaces reported zero drops in the captured counter snapshot",
+    "Operator disabled the car internet-client connection while retaining its WLAN hotspot",
+    "After a fresh startup, operator reported no further disconnect and noticeably smoother interaction"
+  ],
+  "inference": "Supports an uplink/hotspot startup interaction; channel migration, firewall/NAT changes and other contention are not individually isolated",
+  "duration": "Not recorded precisely; no long-duration acceptance claim",
+  "still_unqualified": [
+    "long drives and freeze recovery",
+    "repeat camera handoff and call scenarios",
+    "overnight sleep/reconnect",
+    "wireless media/artwork behavior",
+    "other firmware/iOS/hardware combinations"
+  ],
+  "privacy": "No raw logs, SSIDs, MAC addresses, pairing keys, credentials, VIN or tester backups included"
+}

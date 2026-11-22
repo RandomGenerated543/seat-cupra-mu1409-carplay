@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-19",
+  "car_accessed": false,
+  "hardware_acceptance": "UNTESTED",
+  "patched_java_scenarios": "PASS",
+  "java_link_metadata_classes": 12,
+  "arm_receiver_emulation": "PASS",
+  "native_entry_fingerprints": 15,
+  "channel_watcher_fixture": "PASS",
+  "transaction_fixture_cases": 10,
+  "binary_reproduction_artifacts": 3,
+  "release_static_checks": "PASS",
+  "ramdisk_space_regression": "PASS at 19956 KiB free; FAIL without writes at 1000000 bytes free",
+  "space_comparison": "PASS exact reported values: RAM20421632, app211760128, ota3123281920; boundaries and malformed inputs checked",
+  "native_manifest_parser": "PASS actual ARM instructions with fixture APIs; strict delimiter, paths, duplicates and newline checks",
+  "unfinished_backup_recovery": "PASS original backup preserved; refuses changed live baseline"
+}

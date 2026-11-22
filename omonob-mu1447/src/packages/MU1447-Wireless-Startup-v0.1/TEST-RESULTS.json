@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-21",
+  "baseline": "Runtime v0.1 installed",
+  "hardware_acceptance": "PENDING",
+  "results": {
+    "runtime-tests.log": "OWNERSHIP=PASS mixed_camera_order independent_take stale_canvas deferred_claim_once explicit_UI session_drop_during_camera wired_fallback\nSESSION=PASS active_without_main_video real_end_with_stale_video unknown_fallback\nSTARTUP=PASS delayed_locator observer_retry restartable_latch cleanup\nTOUCH=PASS blocked_sender_does_not_block_input bounded_coalescing camera_gesture_handoff no_partial_OEM_gesture disable_fallback\nREGISTRATION=PASS one_target retry_partial_observer retry_partial_listener cleanup_failure_retains_identity no_duplicate_unregistration\n",
+    "abi-tests.log": "ABI=PASS target_class_version=46 no_new_Java5_bytecode OEM_touch_methods_preserved unrelated_donor_entries_preserved classes=13\n",
+    "startup-tests.log": "OLD_STARTUP_DELAY_REPRODUCED host_ready_delay_ms=1005\nSTARTUP_WAKE=PASS host_ready_delay_ms=1 no_lost_notification unchanged_idle_wait\n",
+    "startup-installer-tests.log": "STARTUP_INSTALLER=PASS readonly_check low_space_refusal exact_runtime_dependencies one_file_only idempotence sealed_restore later_edit_refusal replacement_failure_rollback\n"
+  },
+  "changed_unit_files": 1,
+  "network_scope": "unchanged"
+}

@@ -1,0 +1,1 @@
+package de.vw.mib.genericevents;public class EventDispatcherHSM {public Object target;public int calls,unregisters;public int registerTarget(Target t,String task){if(!task.equals("hsmtask"))throw new AssertionError();calls++;target=t;return 1001;}public Object getTarget(int id){return target;}public void unregisterTarget(int id){unregisters++;target=null;}}

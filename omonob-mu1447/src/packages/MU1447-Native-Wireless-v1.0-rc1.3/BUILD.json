@@ -1,0 +1,13 @@
+{
+  "name": "MU1447-Native-Wireless-v1.0-rc1.3",
+  "hardware_validation": "NOT_PERFORMED",
+  "baseline": "MU1447 wired public rc.7 + owner display patches",
+  "touch_fix": "independent screen take/borrow ownership",
+  "receiver_sha256": "a472ab354eb8c69afc1c7b6b56e2e4f36b026609ffc35e331dab520ed92f5d7b",
+  "entry_sha256": "17906deca48e53499d3da07796c3b8028828a4db4bbdbfe577142320ccd33a24",
+  "normalizer_sha256": "46cf730c5b630e7eefe6d2324f2f8d5a73f5885ec7739714364327ef4bf2cdcf",
+  "target_count": 41,
+  "source_date": "2026-11-19",
+  "installer_revision": "rc1.3_native_manifest_format_and_prewrite_backup_recovery",
+  "runtime_changes_since_rc1": false
+}

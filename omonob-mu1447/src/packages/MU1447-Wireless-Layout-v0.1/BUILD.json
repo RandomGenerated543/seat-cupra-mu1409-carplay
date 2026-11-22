@@ -1,0 +1,14 @@
+{
+  "name": "MU1447-Wireless-Layout-v0.1",
+  "date": "2026-11-19",
+  "vehicle_acceptance": "UNTESTED",
+  "center_variants": [
+    56,
+    76
+  ],
+  "preference_record_tested": "position=0 generation=46 crc32=1d4def3c",
+  "zoom": 70,
+  "network_changes": false,
+  "java_touch_changes": false,
+  "arm_test_cases": 32
+}

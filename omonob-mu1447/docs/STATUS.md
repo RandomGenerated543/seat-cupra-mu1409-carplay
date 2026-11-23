@@ -2,6 +2,12 @@
 
 Publication: **22 November 2026**. Highly experimental, exact-target installation only.
 
+## Latest vehicle report on 23 November 2026
+
+The owner reports that the car is **working perfectly, with no bugs currently observed**. This supersedes the earlier failure reports as the latest description of this car's operation. The successful configuration previously reported keeps the WLAN hotspot enabled and disables the Wi-Fi internet client and automatic search/join.
+
+See the [full implementation review](IMPLEMENTATION-REVIEW.md) and the [dated operator report](../validation/OPERATOR-REPORT-2026-11-23.json). No new live-file receipt, measured test duration or individual scenario checklist accompanied this update; it is an owner report for the current car, not universal compatibility qualification. The historical test records and original archive hashes remain unchanged.
+
 ## What the operator reported
 
 The operator used a SEAT/Cupra P4709 / MU1447 unit with a 790-family cockpit and stated that all current corrections were installed. The Runtime v0.1 preflight output showed a matching live receiver, a read-only session inspection and successful 10-class J9 linkage checking without activators.
@@ -20,7 +26,7 @@ Startup tests run the patched CP worker with simulated OEM/network boundaries: t
 
 Original package build-time notes remain unchanged. Later operator reports supplement them; they do not rewrite all build-time `UNTESTED` fields into blanket acceptance. See [validation records](../validation).
 
-## Still open or unqualified
+## Scope still unqualified
 
 - Concurrent home-Wi-Fi uplink and native CarPlay is not reliably qualified; the current successful configuration disables the uplink.
 - Longer drives, recurring freeze/touch-loss diagnosis, repeated camera/reversing transitions, calls and overnight reconnect still need extended vehicle testing.

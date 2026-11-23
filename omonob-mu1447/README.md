@@ -14,6 +14,8 @@ This is an unofficial port/patch collection, not an upstream-endorsed release or
 4. Read [restore order](docs/RECOVERY.md) before installation.
 5. Read [tested configuration and open issues](docs/STATUS.md), especially the **hotspot-on / internet-client-off workaround**.
 
+For the full technical account, read the [implementation review](docs/IMPLEMENTATION-REVIEW.md): MU1447 compatibility, Bluetooth bootstrap, networking, camera/touch ownership, startup, session tracking, cockpit layout, installer corrections and validation, with links to the published source.
+
 ## What is included
 
 - The MU1447 wired display add-on: fixed **70% cockpit zoom**, `showETA=yes`, and navigation-card safe areas. No extra zoom menu is added.
@@ -27,6 +29,8 @@ This is an unofficial port/patch collection, not an upstream-endorsed release or
 The existing omonob media/artwork launcher path is preserved. **Wireless media/artwork was not independently qualified.** The earlier MU1409 media bridge and MHI2 main-screen zoom candidate are separate implementations and are not transplanted into this branch. Cockpit display scaling is also separate from steering-wheel map zoom buttons.
 
 ## Current vehicle report
+
+**23 November 2026:** the owner reports that the car is working perfectly, with no bugs currently observed. This is the latest vehicle report; see the [implementation review](docs/IMPLEMENTATION-REVIEW.md) and [dated report](validation/OPERATOR-REPORT-2026-11-23.json). The successful configuration previously reported keeps the hotspot enabled and the internet client/search disabled. The latest report does not establish every other vehicle, phone or simultaneous-uplink configuration.
 
 On 21 November 2026 the operator reported installing the current corrections. Two whole-session drops occurred during startup while the hotspot channel moved and the car joined its Wi-Fi internet uplink. The receiver remained alive. After disabling the car's internet-client connection, **while leaving its hotspot enabled**, the operator reported no further disconnect and smoother interaction in that test. Duration was not recorded precisely. This is a useful workaround report, not a long-term stability certificate or proof that the channel change alone caused the problem.
 
